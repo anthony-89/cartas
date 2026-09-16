@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500;600&family=Alex+Brush&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FAF6EE; }
+  * { box-sizing: border-box; }
+  a { color: #B05C4C; }
+  a:hover { color: #A23232; }
+</style>
+</helmet>
+
+<div style="font-family: 'Cormorant Garamond', serif; color: #4A3F35; background: #FAF6EE; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <header style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:18px 5vw; background:#FAF6EE; border-bottom:1px solid #EADFCB;">
+    <div style="display:flex; flex-direction:column; line-height:1.05;">
+      <span style="font-family:'Playfair Display', serif; font-size:22px; font-weight:600; color:#8A6952;">Cartas <span style="font-style:italic; font-weight:500;">para quedarme</span></span>
+      <span style="font-family:'Jost', sans-serif; font-size:9px; letter-spacing:2px; color:#B05C4C; text-transform:uppercase; margin-top:2px;">Gotitas de miel y luz</span>
+    </div>
+    <nav style="display:flex; gap:28px; flex-wrap:wrap; font-family:'Jost', sans-serif; font-size:13px; letter-spacing:0.5px; color:#5C5346;">
+      <span>Inicio</span><span>La historia</span><span>Qué recibes</span><span>Suscripción</span><span>Preguntas</span>
+    </nav>
+    <button style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 22px; border-radius:2px; cursor:pointer;">Suscribirme</button>
+  </header>
+
+  <!-- HERO -->
+  <section style="position:relative; display:grid; grid-template-columns: minmax(280px,1fr) minmax(280px,1fr); gap:40px; padding:64px 5vw 76px; align-items:center;">
+    <div>
+      <h1 style="font-family:'Playfair Display', serif; font-size:clamp(38px,5vw,58px); font-weight:600; margin:0; line-height:1.05; color:#4A3F35;">Cartas<br><span style="font-family:'Alex Brush', cursive; font-weight:400; font-size:1.5em; color:#8A6952;">para quedarme</span></h1>
+      <p style="font-family:'Jost', sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#B05C4C; margin:10px 0 26px;">Gotitas de Miel y Luz</p>
+      <h2 style="font-family:'Playfair Display', serif; font-weight:500; font-size:22px; margin:0 0 14px; color:#656D4D;">Correspondencia para acompañar la vida</h2>
+      <p style="font-size:19px; line-height:1.6; color:#5C5346; max-width:440px; margin:0 0 28px;">Una carta que llega hasta tus manos para invitarte a leer, sentir, guardar y volver.</p>
+      <button style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
+      <p style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:0.5px; color:#8A6952; margin-top:16px;">Una entrega mensual · enviada hasta tu casa</p>
+    </div>
+    <div style="position:relative;">
+      <div style="aspect-ratio:4/5; border-radius:4px; background:linear-gradient(155deg,#D0B495 0%,#B05C4C 55%,#8A6952 100%); display:flex; align-items:flex-end; padding:22px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:18px; left:18px; width:46px; height:46px; border-radius:50%; background:#A23232; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1.2 4.5 2.5 1-1.3 2.5-2.5 4.5-2.5 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z" fill="#F3EEE4"/></svg>
+        </div>
+        <p style="font-family:'Playfair Display', serif; font-style:italic; color:#FAF6EE; font-size:16px; margin:0;">Foto: sobre kraft con sello de cera y flores secas</p>
+      </div>
+      <div style="position:absolute; top:-18px; right:-14px; background:#FAF6EE; border:1px solid #EADFCB; padding:12px 18px; border-radius:3px; box-shadow:0 6px 18px rgba(74,63,53,0.1); max-width:170px;">
+        <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; margin:0; color:#8A6952; line-height:1.4;">Más que cartas, una forma de quedarnos cerca.</p>
+      </div>
+      <div style="position:absolute; bottom:-16px; left:-10px; background:#FAF6EE; border:1px solid #EADFCB; padding:12px 16px; border-radius:3px; box-shadow:0 6px 18px rgba(74,63,53,0.1);">
+        <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; margin:0; color:#8A6952;">Historias que también habitan en ti.</p>
+      </div>
+    </div>
+    <svg viewBox="0 0 1200 34" preserveAspectRatio="none" style="position:absolute; bottom:-1px; left:0; width:100%; height:34px; display:block;">
+      <polygon points="0,34 0,14 35,22 70,8 105,20 140,6 175,18 210,10 245,24 280,12 315,20 350,6 385,22 420,10 455,18 490,8 525,24 560,12 595,20 630,6 665,18 700,10 735,24 770,12 805,20 840,6 875,18 910,10 945,24 980,12 1015,20 1050,6 1085,18 1120,10 1155,22 1200,14 1200,34" fill="#F3EEE4"/>
+    </svg>
+  </section>
+
+  <!-- HISTORIA -->
+  <section style="display:grid; grid-template-columns: minmax(280px,1.1fr) minmax(240px,0.9fr); gap:48px; padding:70px 5vw; align-items:center; background:#F3EEE4;">
+    <div>
+      <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 20px; color:#4A3F35;">La historia detrás de las cartas</h2>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 16px;">Siempre he creído que recibir algo por correo es una forma de amor.</p>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0;">De niña me escribía por correspondencia con una amiga. Más tarde, cuando viví fuera de México, las cartas siguieron siendo un puente. Hoy, aunque tenemos mensajes inmediatos, recibir algo tangible sigue provocando algo diferente en el cuerpo.</p>
+      <p style="font-family:'Caveat', cursive; font-size:26px; color:#B05C4C; margin-top:26px; transform:rotate(-2deg);">Hay cosas que llegan más lejos...</p>
+    </div>
+    <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#E2CCBC 0%,#C68984 100%); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
+      <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#4A3F35; margin:0;">Foto: postales, sobres y una pluma sobre madera</p>
+    </div>
+  </section>
+
+  <!-- QUE SON -->
+  <section style="padding:72px 5vw; text-align:center; background:#FAF6EE; position:relative;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 18px; color:#4A3F35;">¿Qué son Cartas para quedarme?</h2>
+    <p style="font-size:19px; line-height:1.8; color:#5C5346; max-width:680px; margin:0 auto;">Es una correspondencia mensual creada para acompañar la vida. Cada mes recibirás en tu casa una carta escrita alrededor de un tema humano: aquello que estamos viviendo, sintiendo, intentando comprender, aprendiendo a soltar o queriendo volver a escuchar.</p>
+    <p style="font-size:19px; line-height:1.8; color:#5C5346; max-width:680px; margin:16px auto 0;">No son cartas para enseñarte cómo vivir. Son palabras para hacer una pausa. Para sentir. Para recordar. Para quedarte un momento contigo.</p>
+  </section>
+
+  <!-- QUE ENCONTRARAS -->
+  <section style="padding:16px 5vw 76px; background:#FAF6EE;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; text-align:center; color:#4A3F35;">¿Qué encontrarás dentro del sobre?</h2>
+    <p style="font-size:18px; text-align:center; color:#8A6952; margin:0 0 40px;">Cada mes recibirás una experiencia completa, pensada con cuidado.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; max-width:1000px; margin:0 auto;">
+      <div style="text-align:center;">
+        <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:14px;">
+          <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:13px; color:#4A3F35; margin:0;">Foto: carta escrita sobre madera</p>
+        </div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para leer</h3>
+        <p style="font-size:16px; color:#8A6952; margin:0;">La carta del mes.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#A8B092,#656D4D); display:flex; align-items:center; justify-content:center; padding:14px;">
+          <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:13px; color:#FAF6EE; margin:0;">Foto: objeto de papel con hojas</p>
+        </div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para guardar</h3>
+        <p style="font-size:16px; color:#8A6952; margin:0;">Un pequeño objeto coleccionable.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#E0B046,#B05C4C); display:flex; align-items:center; justify-content:center; padding:14px;">
+          <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:13px; color:#FAF6EE; margin:0;">Foto: hierbas y flores en un tazón</p>
+        </div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para preparar</h3>
+        <p style="font-size:16px; color:#8A6952; margin:0;">Una pócima, bebida o receta sencilla.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NO ES SOLO UNA CARTA -->
+  <section style="display:grid; grid-template-columns: minmax(240px,0.9fr) minmax(280px,1.1fr); gap:48px; padding:70px 5vw; align-items:center; background:#F3EEE4;">
+    <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#D0B495,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
+      <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#FAF6EE; margin:0;">Foto: manos con taza de café y libro abierto</p>
+    </div>
+    <div>
+      <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 18px; color:#4A3F35;">No es solo una carta</h2>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 14px;">Hay cosas que llegan rápido. Y hay cosas que merecen llegar despacio.</p>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 14px;">Abrir el buzón. Encontrar un sobre. Reconocer tu nombre en él. Romper un sello. Desdoblar una hoja. Preparar algo caliente. Leer sin prisa.</p>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0;">Cartas para quedarme quiere recuperar ese pequeño ritual.</p>
+      <p style="font-family:'Caveat', cursive; font-size:24px; color:#B05C4C; margin-top:20px; transform:rotate(-1.5deg);">Una pausa también es parte del camino. ♡</p>
+    </div>
+  </section>
+
+  <!-- DOCE CARTAS -->
+  <section style="padding:70px 5vw; text-align:center; background:#FAF6EE;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; color:#4A3F35;">Doce cartas. Doce momentos para volver.</h2>
+    <p style="font-size:18px; color:#8A6952; margin:0 0 36px;">Un año de correspondencia para acompañar distintos territorios de la vida.</p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; max-width:900px; margin:0 auto;">
+      <sc-for list="{{ months }}" as="m" hint-placeholder-count="12">
+        <div style="width:64px; height:64px; border-radius:50%; background:#E2CCBC; display:flex; align-items:center; justify-content:center; font-family:'Jost', sans-serif; font-size:13px; color:#4A3F35;">{{ m }}</div>
+      </sc-for>
+    </div>
+    <p style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:0.5px; color:#8A6952; margin:32px 0 0;">Volver al cuerpo · Escuchar · Cuidar · Soltar · Confiar · Habitar · Recordar · Agradecer · Cerrar · Comenzar...</p>
+    <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:16px; color:#B05C4C; margin-top:22px;">♡ Un camino, muchos encuentros.</p>
+  </section>
+
+  <!-- PARA QUIEN -->
+  <section style="padding:74px 5vw; background:#F3EEE4;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; text-align:center; color:#4A3F35;">¿Para quién son estas cartas?</h2>
+    <p style="font-size:18px; text-align:center; color:#8A6952; margin:0 0 44px;">Estas cartas pueden ser para ti si...</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:36px; max-width:1000px; margin:0 auto 36px;">
+      <div style="text-align:center;">
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#656D4D;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20c0-8 6-14 14-16-2 8-8 14-14 16z"/></svg></div>
+        <p style="font-size:17px; color:#5C5346; margin:0;">Extrañas espacios más lentos y personales.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#A23232;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1.2 4.5 2.5 1-1.3 2.5-2.5 4.5-2.5 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z"/></svg></div>
+        <p style="font-size:17px; color:#5C5346; margin:0;">Disfrutas leer, escribir y guardar objetos con significado.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#D4AF37;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 2l3 3M12 2l-3 3" /><circle cx="12" cy="14" r="6"/></svg></div>
+        <p style="font-size:17px; color:#5C5346; margin:0;">Estás atravesando cambios o momentos importantes.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#E0B046;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+        <p style="font-size:17px; color:#5C5346; margin:0;">Buscas pequeñas pausas en una vida muy llena.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#C68984;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17c3-8 15-8 18 0"/></svg></div>
+        <p style="font-size:17px; color:#5C5346; margin:0;">Disfrutas palabras que no dan instrucciones, sino compañía.</p>
+      </div>
+      <div style="text-align:center;">
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#B05C4C;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21c-4-3-8-6-8-11a4 4 0 018-1 4 4 0 018 1c0 5-4 8-8 11z"/></svg></div>
+        <p style="font-size:17px; color:#5C5346; margin:0;">Quieres regalarte algo que no necesitas consumir inmediatamente.</p>
+      </div>
+    </div>
+    <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:17px; text-align:center; color:#8A6952; margin:0;">No necesitas estar pasando por algo difícil para necesitar compañía.</p>
+  </section>
+
+  <!-- DEL OTRO LADO -->
+  <section style="display:grid; grid-template-columns: minmax(240px,0.9fr) minmax(280px,1.1fr); gap:48px; padding:74px 5vw; align-items:center; background:#FAF6EE;">
+    <div style="aspect-ratio:4/5; border-radius:3px; background:linear-gradient(160deg,#C68984,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
+      <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#FAF6EE; margin:0;">Foto: mujer escribiendo junto a una ventana</p>
+    </div>
+    <div>
+      <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 18px; color:#4A3F35;">Del otro lado del sobre estoy yo.</h2>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 14px;">Soy Isabel de la Rosa. Desde hace años acompaño procesos humanos a través de la psicoterapia, la meditación, el trabajo corporal y las palabras.</p>
+      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 24px;">Gotitas de Miel y Luz nació como una forma de acompañar a través de la voz. Cartas para quedarme nace del deseo de llevar ese acompañamiento a algo que puedas tocar, abrir, guardar y encontrar nuevamente tiempo después.</p>
+      <button style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px 26px; border-radius:2px; cursor:pointer;">Conóceme más</button>
+    </div>
+  </section>
+
+  <!-- ASI FUNCIONA -->
+  <section style="padding:74px 5vw; text-align:center; background:#F3EEE4;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 44px; color:#4A3F35;">Así funciona</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:28px; max-width:1000px; margin:0 auto;">
+      <div>
+        <div style="width:64px; height:64px; border-radius:50%; background:#E2CCBC; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:#8A6952;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg></div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:17px; font-weight:600; margin:0 0 6px;">1. Te suscribes</h3>
+        <p style="font-size:15px; color:#8A6952; margin:0;">Eliges recibir Cartas para quedarme.</p>
+      </div>
+      <div>
+        <div style="width:64px; height:64px; border-radius:50%; background:#E2CCBC; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:#8A6952;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="8" width="16" height="12" rx="1"/><path d="M4 8l3-4h10l3 4M12 8v12"/></svg></div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:17px; font-weight:600; margin:0 0 6px;">2. Preparamos tu envío</h3>
+        <p style="font-size:15px; color:#8A6952; margin:0;">Cada mes preparamos la correspondencia.</p>
+      </div>
+      <div>
+        <div style="width:64px; height:64px; border-radius:50%; background:#E2CCBC; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:#8A6952;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="9" width="14" height="9"/><path d="M15 12h4l3 3v3h-7z"/><circle cx="6" cy="19.5" r="1.5"/><circle cx="18" cy="19.5" r="1.5"/></svg></div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:17px; font-weight:600; margin:0 0 6px;">3. La carta comienza su viaje</h3>
+        <p style="font-size:15px; color:#8A6952; margin:0;">La enviamos a la dirección que hayas registrado.</p>
+      </div>
+      <div>
+        <div style="width:64px; height:64px; border-radius:50%; background:#E2CCBC; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; color:#8A6952;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></div>
+        <h3 style="font-family:'Playfair Display', serif; font-size:17px; font-weight:600; margin:0 0 6px;">4. La recibes</h3>
+        <p style="font-size:15px; color:#8A6952; margin:0;">Y tú decides cuándo abrirla.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIBE / PRICING -->
+  <section style="padding:74px 5vw; background:#A8B092;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 6px; text-align:center; color:#3A3F30;">Recibe Cartas para quedarme</h2>
+    <p style="font-size:18px; text-align:center; color:#4A4F3D; margin:0 0 40px;">Una entrega cada mes</p>
+    <div style="display:grid; grid-template-columns: minmax(240px,1fr) minmax(260px,1fr); gap:36px; max-width:900px; margin:0 auto; align-items:center;">
+      <div style="aspect-ratio:4/3; border-radius:3px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
+        <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#4A3F35; margin:0;">Foto: sobre amarrado con listón y flores secas</p>
+      </div>
+      <div style="background:#FAF6EE; border-radius:4px; padding:32px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
+        <ul style="list-style:none; padding:0; margin:0 0 24px; font-size:17px; color:#4A3F35; display:flex; flex-direction:column; gap:10px;">
+          <li>✓ Carta del mes</li>
+          <li>✓ Objeto para guardar</li>
+          <li>✓ Propuesta para preparar</li>
+          <li>✓ Envío incluido*</li>
+        </ul>
+        <p style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 20px; color:#4A3F35;">$7 USD <span style="font-size:16px; font-weight:400; color:#8A6952;">/ mes</span></p>
+        <button style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px; border-radius:2px; cursor:pointer; margin-bottom:10px;">Quiero suscribirme</button>
+        <button style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:transparent; color:#8A6952; border:1px solid #D0B495; padding:14px; border-radius:2px; cursor:pointer;">Regalar una suscripción</button>
+        <p style="font-size:13px; color:#8A6952; margin:14px 0 0;">*Consulta zonas de envío en preguntas frecuentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:74px 5vw; background:#FAF6EE;">
+    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 40px; text-align:center; color:#4A3F35;">Preguntas frecuentes</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px 40px; max-width:900px; margin:0 auto;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
+        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid #EADFCB;">
+          <span style="font-size:17px; color:#4A3F35;">{{ f }}</span>
+          <span style="color:#B05C4C; font-size:18px;">+</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section style="position:relative; padding:90px 5vw; background:linear-gradient(155deg,#B05C4C 0%,#8A6952 60%,#656D4D 100%); text-align:center; overflow:hidden;">
+    <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#F3EEE4; opacity:0.8; margin:0 0 10px;">Foto: cerro y montañas al atardecer</p>
+    <h2 style="font-family:'Playfair Display', serif; font-size:36px; font-weight:600; margin:0 0 18px; color:#FAF6EE;">Algo bonito está en camino.</h2>
+    <p style="font-size:19px; color:#F3EEE4; max-width:520px; margin:0 auto 22px; line-height:1.6;">Una carta. Un pequeño objeto. Un gesto de cuidado. Un momento para volver a ti.</p>
+    <p style="font-family:'Caveat', cursive; font-size:26px; color:#F3EEE4; margin:0 0 30px;">Correspondencia para acompañar la vida. ♡</p>
+    <button style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#FAF6EE; color:#B05C4C; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; padding:28px 5vw; background:#F3EEE4; border-top:1px solid #EADFCB;">
+    <div style="display:flex; flex-direction:column; line-height:1.1; white-space:nowrap; gap:4px;">
+      <span style="font-family:'Playfair Display', serif; font-size:18px; font-weight:600; color:#8A6952;">Cartas <span style="font-style:italic; font-weight:500;">para quedarme</span></span>
+      <span style="font-family:'Jost', sans-serif; font-size:8px; letter-spacing:2px; color:#B05C4C; text-transform:uppercase;">Gotitas de miel y luz</span>
+    </div>
+    <nav style="display:flex; gap:22px; flex-wrap:wrap; font-family:'Jost', sans-serif; font-size:12px; color:#5C5346;">
+      <span>Inicio</span><span>La historia</span><span>Suscripción</span><span>Preguntas</span><span>Contacto</span>
+    </nav>
+    <div style="display:flex; gap:16px; color:#8A6952;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M7 9c4-1 8-1 11 1M6 12c4-1 8-1 10 1M7 15c3-0.7 6-0.7 8 0.5"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM12 7v5l3 2"/></svg>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      months: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+      faqs: [
+        '¿Cuándo llegará mi primera carta?',
+        '¿A qué lugares realizan envíos?',
+        '¿El costo incluye envío?',
+        '¿Puedo cancelar mi suscripción?',
+        '¿Puedo regalar una suscripción?',
+        '¿Todas las personas reciben la misma carta?',
+        '¿Las cartas anteriores estarán disponibles?',
+        '¿Qué ocurre si mi carta no llega?',
+        '¿Puedo cambiar mi domicilio?',
+        '¿Tengo que recibir las doce cartas?'
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
