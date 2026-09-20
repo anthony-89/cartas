@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500;600&family=Alex+Brush&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 <style>
+  html { scroll-behavior: smooth; }
   body { margin: 0; background: #FAF6EE; }
   * { box-sizing: border-box; }
   a { color: #B05C4C; }
@@ -21,25 +22,25 @@
 <div style="font-family: 'Cormorant Garamond', serif; color: #4A3F35; background: #FAF6EE; overflow-x: hidden;">
 
   <!-- NAV -->
-  <header style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:18px 5vw; background:#FAF6EE; border-bottom:1px solid #EADFCB;">
+  <header style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:16px 5vw; background:#FAF6EE; border-bottom:1px solid #EADFCB;">
     <div style="display:flex; flex-direction:column; line-height:1.05;">
       <span style="font-family:'Playfair Display', serif; font-size:22px; font-weight:600; color:#8A6952;">Cartas <span style="font-style:italic; font-weight:500;">para quedarme</span></span>
       <span style="font-family:'Jost', sans-serif; font-size:9px; letter-spacing:2px; color:#B05C4C; text-transform:uppercase; margin-top:2px;">Gotitas de miel y luz</span>
     </div>
     <nav style="display:flex; gap:28px; flex-wrap:wrap; font-family:'Jost', sans-serif; font-size:13px; letter-spacing:0.5px; color:#5C5346;">
-      <span>Inicio</span><span>La historia</span><span>Qué recibes</span><span>Suscripción</span><span>Preguntas</span>
+      <a href="#inicio" style="color:#5C5346; text-decoration:none;">Inicio</a><a href="#historia" style="color:#5C5346; text-decoration:none;">La historia</a><a href="#que-recibes" style="color:#5C5346; text-decoration:none;">Qué recibes</a><a href="#suscripcion" style="color:#5C5346; text-decoration:none;">Suscripción</a><a href="#preguntas" style="color:#5C5346; text-decoration:none;">Preguntas</a>
     </nav>
-    <button style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 22px; border-radius:2px; cursor:pointer;">Suscribirme</button>
+    <button onClick="{{ openSubscribe }}" style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 22px; border-radius:2px; cursor:pointer;">Suscribirme</button>
   </header>
 
   <!-- HERO -->
-  <section style="position:relative; display:grid; grid-template-columns: minmax(280px,1fr) minmax(280px,1fr); gap:40px; padding:64px 5vw 76px; align-items:center;">
+  <section id="inicio" style="position:relative; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:40px; padding:48px 5vw 76px; align-items:center;">
     <div>
       <h1 style="font-family:'Playfair Display', serif; font-size:clamp(38px,5vw,58px); font-weight:600; margin:0; line-height:1.05; color:#4A3F35;">Cartas<br><span style="font-family:'Alex Brush', cursive; font-weight:400; font-size:1.5em; color:#8A6952;">para quedarme</span></h1>
       <p style="font-family:'Jost', sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#B05C4C; margin:10px 0 26px;">Gotitas de Miel y Luz</p>
       <h2 style="font-family:'Playfair Display', serif; font-weight:500; font-size:22px; margin:0 0 14px; color:#656D4D;">Correspondencia para acompañar la vida</h2>
       <p style="font-size:19px; line-height:1.6; color:#5C5346; max-width:440px; margin:0 0 28px;">Una carta que llega hasta tus manos para invitarte a leer, sentir, guardar y volver.</p>
-      <button style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
+      <button onClick="{{ openSubscribe }}" style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
       <p style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:0.5px; color:#8A6952; margin-top:16px;">Una entrega mensual · enviada hasta tu casa</p>
     </div>
     <div style="position:relative;">
@@ -62,7 +63,7 @@
   </section>
 
   <!-- HISTORIA -->
-  <section style="display:grid; grid-template-columns: minmax(280px,1.1fr) minmax(240px,0.9fr); gap:48px; padding:70px 5vw; align-items:center; background:#F3EEE4;">
+  <section id="historia" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
     <div>
       <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 20px; color:#4A3F35;">La historia detrás de las cartas</h2>
       <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 16px;">Siempre he creído que recibir algo por correo es una forma de amor.</p>
@@ -82,7 +83,7 @@
   </section>
 
   <!-- QUE ENCONTRARAS -->
-  <section style="padding:16px 5vw 76px; background:#FAF6EE;">
+  <section id="que-recibes" style="padding:16px 5vw 76px; background:#FAF6EE;">
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; text-align:center; color:#4A3F35;">¿Qué encontrarás dentro del sobre?</h2>
     <p style="font-size:18px; text-align:center; color:#8A6952; margin:0 0 40px;">Cada mes recibirás una experiencia completa, pensada con cuidado.</p>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; max-width:1000px; margin:0 auto;">
@@ -111,7 +112,7 @@
   </section>
 
   <!-- NO ES SOLO UNA CARTA -->
-  <section style="display:grid; grid-template-columns: minmax(240px,0.9fr) minmax(280px,1.1fr); gap:48px; padding:70px 5vw; align-items:center; background:#F3EEE4;">
+  <section style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
     <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#D0B495,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
       <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#FAF6EE; margin:0;">Foto: manos con taza de café y libro abierto</p>
     </div>
@@ -122,19 +123,6 @@
       <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0;">Cartas para quedarme quiere recuperar ese pequeño ritual.</p>
       <p style="font-family:'Caveat', cursive; font-size:24px; color:#B05C4C; margin-top:20px; transform:rotate(-1.5deg);">Una pausa también es parte del camino. ♡</p>
     </div>
-  </section>
-
-  <!-- DOCE CARTAS -->
-  <section style="padding:70px 5vw; text-align:center; background:#FAF6EE;">
-    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; color:#4A3F35;">Doce cartas. Doce momentos para volver.</h2>
-    <p style="font-size:18px; color:#8A6952; margin:0 0 36px;">Un año de correspondencia para acompañar distintos territorios de la vida.</p>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; max-width:900px; margin:0 auto;">
-      <sc-for list="{{ months }}" as="m" hint-placeholder-count="12">
-        <div style="width:64px; height:64px; border-radius:50%; background:#E2CCBC; display:flex; align-items:center; justify-content:center; font-family:'Jost', sans-serif; font-size:13px; color:#4A3F35;">{{ m }}</div>
-      </sc-for>
-    </div>
-    <p style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:0.5px; color:#8A6952; margin:32px 0 0;">Volver al cuerpo · Escuchar · Cuidar · Soltar · Confiar · Habitar · Recordar · Agradecer · Cerrar · Comenzar...</p>
-    <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:16px; color:#B05C4C; margin-top:22px;">♡ Un camino, muchos encuentros.</p>
   </section>
 
   <!-- PARA QUIEN -->
@@ -151,7 +139,7 @@
         <p style="font-size:17px; color:#5C5346; margin:0;">Disfrutas leer, escribir y guardar objetos con significado.</p>
       </div>
       <div style="text-align:center;">
-        <div style="width:44px; height:44px; margin:0 auto 14px; color:#D4AF37;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 2l3 3M12 2l-3 3" /><circle cx="12" cy="14" r="6"/></svg></div>
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#D4AF37;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5c1-1.6 3-1.6 3.4.2.4 1.8-1.3 3-3.4 3.3M12 5c-1-1.6-3-1.6-3.4.2-.4 1.8 1.3 3 3.4 3.3M16.4 8.5c1.8-.6 3.2.8 2.3 2.6-.9 1.7-3 1.8-4.3.3M16.4 8.5c.4-1.8-1.2-3-2.8-2M7.6 8.5c-1.8-.6-3.2.8-2.3 2.6.9 1.7 3 1.8 4.3.3M7.6 8.5c-.4-1.8 1.2-3 2.8-2M9.4 11.4c-.9 1.5-2.9 1.4-3.2-.6-.3-1.9 1.5-2.9 3.2-2.2M14.6 11.4c.9 1.5 2.9 1.4 3.2-.6.3-1.9-1.5-2.9-3.2-2.2"/><circle cx="12" cy="10.5" r="2.6" stroke-width="1.5"/><path d="M12 13v8M9 21h6"/></svg></div>
         <p style="font-size:17px; color:#5C5346; margin:0;">Estás atravesando cambios o momentos importantes.</p>
       </div>
       <div style="text-align:center;">
@@ -159,7 +147,7 @@
         <p style="font-size:17px; color:#5C5346; margin:0;">Buscas pequeñas pausas en una vida muy llena.</p>
       </div>
       <div style="text-align:center;">
-        <div style="width:44px; height:44px; margin:0 auto 14px; color:#C68984;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17c3-8 15-8 18 0"/></svg></div>
+        <div style="width:44px; height:44px; margin:0 auto 14px; color:#C68984;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9h11v5a5.5 5.5 0 01-5.5 5.5v0A5.5 5.5 0 016 14V9z"/><path d="M17 10.5h2a2 2 0 010 4h-2"/><path d="M9 3c0 1.5-1 1.5-1 3M13 3c0 1.5-1 1.5-1 3"/><path d="M4 21h15"/></svg></div>
         <p style="font-size:17px; color:#5C5346; margin:0;">Disfrutas palabras que no dan instrucciones, sino compañía.</p>
       </div>
       <div style="text-align:center;">
@@ -171,7 +159,7 @@
   </section>
 
   <!-- DEL OTRO LADO -->
-  <section style="display:grid; grid-template-columns: minmax(240px,0.9fr) minmax(280px,1.1fr); gap:48px; padding:74px 5vw; align-items:center; background:#FAF6EE;">
+  <section style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#FAF6EE;">
     <div style="aspect-ratio:4/5; border-radius:3px; background:linear-gradient(160deg,#C68984,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
       <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#FAF6EE; margin:0;">Foto: mujer escribiendo junto a una ventana</p>
     </div>
@@ -211,10 +199,10 @@
   </section>
 
   <!-- RECIBE / PRICING -->
-  <section style="padding:74px 5vw; background:#A8B092;">
+  <section id="suscripcion" style="padding:74px 5vw; background:#A8B092;">
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 6px; text-align:center; color:#3A3F30;">Recibe Cartas para quedarme</h2>
     <p style="font-size:18px; text-align:center; color:#4A4F3D; margin:0 0 40px;">Una entrega cada mes</p>
-    <div style="display:grid; grid-template-columns: minmax(240px,1fr) minmax(260px,1fr); gap:36px; max-width:900px; margin:0 auto; align-items:center;">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:28px; max-width:900px; margin:0 auto; align-items:center;">
       <div style="aspect-ratio:4/3; border-radius:3px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
         <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#4A3F35; margin:0;">Foto: sobre amarrado con listón y flores secas</p>
       </div>
@@ -226,7 +214,7 @@
           <li>✓ Envío incluido*</li>
         </ul>
         <p style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 20px; color:#4A3F35;">$7 USD <span style="font-size:16px; font-weight:400; color:#8A6952;">/ mes</span></p>
-        <button style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px; border-radius:2px; cursor:pointer; margin-bottom:10px;">Quiero suscribirme</button>
+        <button onClick="{{ openSubscribe }}" style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px; border-radius:2px; cursor:pointer; margin-bottom:10px;">Quiero suscribirme</button>
         <button style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:transparent; color:#8A6952; border:1px solid #D0B495; padding:14px; border-radius:2px; cursor:pointer;">Regalar una suscripción</button>
         <p style="font-size:13px; color:#8A6952; margin:14px 0 0;">*Consulta zonas de envío en preguntas frecuentes.</p>
       </div>
@@ -234,13 +222,18 @@
   </section>
 
   <!-- FAQ -->
-  <section style="padding:74px 5vw; background:#FAF6EE;">
+  <section id="preguntas" style="padding:74px 5vw; background:#FAF6EE;">
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 40px; text-align:center; color:#4A3F35;">Preguntas frecuentes</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px 40px; max-width:900px; margin:0 auto;">
+    <div style="display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto;">
       <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
-        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid #EADFCB;">
-          <span style="font-size:17px; color:#4A3F35;">{{ f }}</span>
-          <span style="color:#B05C4C; font-size:18px;">+</span>
+        <div style="padding:20px 0; border-bottom:1px solid #EADFCB; cursor:pointer;" onClick="{{ f.toggle }}">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:16px;">
+            <p style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; color:#4A3F35; margin:0;">{{ f.q }}</p>
+            <span style="color:#B05C4C; font-size:20px; flex-shrink:0;">{{ f.sign }}</span>
+          </div>
+          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
+            <p style="font-size:16px; line-height:1.6; color:#5C5346; margin:12px 0 0; white-space:pre-line;">{{ f.a }}</p>
+          </sc-if>
         </div>
       </sc-for>
     </div>
@@ -252,7 +245,7 @@
     <h2 style="font-family:'Playfair Display', serif; font-size:36px; font-weight:600; margin:0 0 18px; color:#FAF6EE;">Algo bonito está en camino.</h2>
     <p style="font-size:19px; color:#F3EEE4; max-width:520px; margin:0 auto 22px; line-height:1.6;">Una carta. Un pequeño objeto. Un gesto de cuidado. Un momento para volver a ti.</p>
     <p style="font-family:'Caveat', cursive; font-size:26px; color:#F3EEE4; margin:0 0 30px;">Correspondencia para acompañar la vida. ♡</p>
-    <button style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#FAF6EE; color:#B05C4C; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
+    <button onClick="{{ openSubscribe }}" style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#FAF6EE; color:#B05C4C; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
   </section>
 
   <!-- FOOTER -->
@@ -262,7 +255,7 @@
       <span style="font-family:'Jost', sans-serif; font-size:8px; letter-spacing:2px; color:#B05C4C; text-transform:uppercase;">Gotitas de miel y luz</span>
     </div>
     <nav style="display:flex; gap:22px; flex-wrap:wrap; font-family:'Jost', sans-serif; font-size:12px; color:#5C5346;">
-      <span>Inicio</span><span>La historia</span><span>Suscripción</span><span>Preguntas</span><span>Contacto</span>
+      <a href="#inicio" style="color:#5C5346; text-decoration:none;">Inicio</a><a href="#historia" style="color:#5C5346; text-decoration:none;">La historia</a><a href="#suscripcion" style="color:#5C5346; text-decoration:none;">Suscripción</a><a href="#preguntas" style="color:#5C5346; text-decoration:none;">Preguntas</a><span>Contacto</span>
     </nav>
     <div style="display:flex; gap:16px; color:#8A6952;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
@@ -271,26 +264,73 @@
     </div>
   </footer>
 
+  <!-- SUBSCRIBE MODAL -->
+  <sc-if value="{{ subscribeOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; inset:0; background:rgba(74,63,53,0.45); display:flex; align-items:center; justify-content:center; padding:20px; z-index:100;" onClick="{{ closeSubscribe }}">
+      <div style="background:#FAF6EE; border-radius:4px; padding:36px; max-width:400px; width:100%; box-shadow:0 20px 50px rgba(0,0,0,0.25); text-align:center;" onClick="{{ stopClick }}">
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <p style="font-family:'Playfair Display', serif; font-style:italic; color:#B05C4C; font-size:26px; margin:0 0 12px;">¡Gracias!</p>
+          <p style="font-size:17px; color:#5C5346; margin:0 0 24px; line-height:1.6;">Tu primera carta llegará muy pronto. Revisa tu correo para confirmar la suscripción.</p>
+          <button onClick="{{ closeSubscribe }}" style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 24px; border-radius:2px; cursor:pointer;">Cerrar</button>
+        </sc-if>
+        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+          <h3 style="font-family:'Playfair Display', serif; font-size:24px; font-weight:600; margin:0 0 10px; color:#4A3F35;">Quiero recibir mis cartas</h3>
+          <p style="font-size:16px; color:#8A6952; margin:0 0 22px;">Déjanos tu correo para comenzar tu suscripción de $7 USD / mes.</p>
+          <div>
+            <input type="email" placeholder="tu@correo.com" value="{{ email }}" onChange="{{ setEmail }}" style="width:100%; font-family:'Cormorant Garamond', serif; font-size:17px; padding:12px 14px; border:1px solid #D0B495; border-radius:2px; background:#FAF6EE; color:#4A3F35; margin-bottom:8px;"/>
+            <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+              <p style="font-size:13px; color:#A23232; margin:0 0 8px; text-align:left;">Escribe un correo válido.</p>
+            </sc-if>
+            <button onClick="{{ submitEmail }}" style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px; border-radius:2px; cursor:pointer; margin-top:6px;">Confirmar suscripción</button>
+          </div>
+          <button onClick="{{ closeSubscribe }}" style="margin-top:14px; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; background:transparent; color:#8A6952; border:none; cursor:pointer;">Cancelar</button>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  state = { openFaq: null, subscribeOpen: false, email: '', submitted: false, showError: false };
   renderVals() {
+    const raw = [
+        { q: '¿Cuándo llegará mi primera carta?', a: 'Si vives en México, tu carta llegará durante los primeros días del mes.\n\nSi vives fuera de México, el tiempo de entrega puede ser un poco mayor y puedes esperar recibirla entre la segunda y la tercera semana del mes.' },
+        { q: '¿A qué lugares realizan envíos?', a: 'Enviamos Cartas para quedarme a todo el mundo.\n\nSi tu envío es dentro de México, el costo de envío ya está incluido en tu suscripción. Para envíos internacionales se añade $1 USD al costo de la suscripción.' },
+        { q: '¿El costo incluye el envío?', a: 'Sí. El costo de tu suscripción ya incluye el envío.\n\nEn el caso de los envíos fuera de México, únicamente se añade $1 USD por envío internacional.' },
+        { q: '¿Puedo cancelar mi suscripción?', a: 'Claro. Puedes cancelar tu suscripción en cualquier momento.\n\nQueremos que recibir estas cartas siga siendo una elección y no una obligación.' },
+        { q: '¿Puedo regalar una suscripción?', a: 'Claro que sí. Cartas para quedarme también puede convertirse en una forma muy especial de acompañar a alguien que quieres.\n\nAl momento de hacer la suscripción, únicamente necesitamos que registres correctamente el nombre y los datos completos de la persona que recibirá las cartas.' },
+        { q: '¿Todas las personas reciben la misma carta?', a: 'Sí. Cada mes escribimos y enviamos una sola carta para toda nuestra comunidad de suscriptores.\n\nEs una publicación creada especialmente para Cartas para quedarme y su contenido no se publica de la misma manera en ningún otro medio. Quienes están suscritos comparten, desde distintos lugares, una misma correspondencia y un mismo tema durante ese mes.' },
+        { q: '¿Las cartas anteriores están disponibles?', a: 'Sí. Si comenzaste tu suscripción después de que el proyecto ya había iniciado y deseas recibir alguna de las cartas anteriores, podemos hacértelas llegar.\n\nSolo será necesario cubrir el costo correspondiente a esas publicaciones y su envío.' },
+        { q: '¿Qué ocurre si mi carta no llega?', a: 'Aunque esperamos que cada carta encuentre su camino hasta ti, sabemos que alguna vez un envío puede extraviarse.\n\nSi tu carta no llega, escríbenos y con gusto realizaremos un nuevo envío sin costo adicional. Si después de esta experiencia prefieres cancelar tu suscripción, también podemos realizar el reembolso correspondiente a ese mes.' },
+        { q: '¿Puedo cambiar mi domicilio?', a: 'Sí. Si cambias de domicilio, puedes actualizar tus datos enviándonos un correo con tu nueva dirección completa.\n\nEs importante hacerlo antes de que preparemos el envío del mes para asegurarnos de que tu carta llegue al lugar correcto.' },
+        { q: '¿Tengo que recibir las doce cartas?', a: 'No. Puedes comenzar tu suscripción en cualquier momento del año.\n\nPor ejemplo, si te suscribes durante julio, comenzarás a recibir tu correspondencia a partir de agosto y continuarás mientras tu suscripción permanezca activa. Si deseas recibir también las cartas publicadas durante los meses anteriores, podrás solicitarlas por separado, sujeto a disponibilidad.' }
+      ];
     return {
       months: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
-      faqs: [
-        '¿Cuándo llegará mi primera carta?',
-        '¿A qué lugares realizan envíos?',
-        '¿El costo incluye envío?',
-        '¿Puedo cancelar mi suscripción?',
-        '¿Puedo regalar una suscripción?',
-        '¿Todas las personas reciben la misma carta?',
-        '¿Las cartas anteriores estarán disponibles?',
-        '¿Qué ocurre si mi carta no llega?',
-        '¿Puedo cambiar mi domicilio?',
-        '¿Tengo que recibir las doce cartas?'
-      ]
+      faqs: raw.map((f, i) => ({
+        q: f.q,
+        a: f.a,
+        open: this.state.openFaq === i,
+        sign: this.state.openFaq === i ? '−' : '+',
+        toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? null : i }))
+      })),
+      subscribeOpen: this.state.subscribeOpen,
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      email: this.state.email,
+      showError: this.state.showError,
+      openSubscribe: () => this.setState({ subscribeOpen: true, submitted: false, email: '', showError: false }),
+      closeSubscribe: () => this.setState({ subscribeOpen: false }),
+      stopClick: (e) => e.stopPropagation(),
+      setEmail: (e) => this.setState({ email: e.target.value, showError: false }),
+      submitEmail: () => {
+        const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email);
+        if (!ok) { this.setState({ showError: true }); return; }
+        this.setState({ submitted: true });
+      }
     };
   }
 }
