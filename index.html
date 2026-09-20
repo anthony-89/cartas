@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
+<title>Cartas para quedarme · Gotitas de miel y luz</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 </head>
@@ -16,10 +17,175 @@
   * { box-sizing: border-box; }
   a { color: #B05C4C; }
   a:hover { color: #A23232; }
+
+/* Ajustes visuales: se conservan el contenido y la integración original. */
+:root { --paper: #FAF6EE; --ink: #4A3F35; --accent: #B05C4C; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+x-dc { display: block; }
+.cartas-page { line-height: 1.6; }
+.cartas-page > header,
+.cartas-page > section,
+.cartas-page > footer { padding-inline: max(6vw, calc((100vw - 1160px) / 2)) !important; }
+.cartas-page > section { scroll-margin-top: 24px; }
+.cartas-page h1, .cartas-page h2, .cartas-page h3 { text-wrap: balance; }
+.cartas-page h2 { line-height: 1.3; }
+.cartas-page p { text-wrap: pretty; }
+.cartas-page > header { padding-block: 22px !important; gap: 24px !important; }
+.cartas-page nav { column-gap: 24px !important; row-gap: 6px !important; }
+.cartas-page nav a { position: relative; padding-block: 10px; transition: color .2s; }
+.cartas-page nav a:hover { color: var(--accent) !important; }
+.cartas-page nav a::after { content: ''; position: absolute; bottom: 4px; left: 0; right: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .2s; }
+.cartas-page nav a:hover::after { transform: scaleX(1); }
+.cartas-page button { min-height: 44px; line-height: 1.5; border-radius: 5px !important; transition: transform .2s, box-shadow .2s, filter .2s; }
+.cartas-page button:hover { transform: translateY(-2px); filter: brightness(.96); box-shadow: 0 5px 14px rgba(74,63,53,.12); }
+.cartas-page button:active { transform: translateY(0); }
+.cartas-page :is(a, button, input):focus-visible { outline: 2px solid #656D4D; outline-offset: 5px; }
+.cartas-page input { min-height: 48px; border-radius: 5px !important; }
+#inicio { grid-template-columns: 1.05fr 1fr !important; gap: clamp(36px, 6vw, 88px) !important; padding-top: 72px !important; padding-bottom: 94px !important; }
+#inicio h1 { line-height: 1.12 !important; }
+#inicio h1 span { display: inline-block; white-space: nowrap; }
+#inicio > div:nth-child(2) { width: 100%; max-width: 460px; justify-self: end; }
+#inicio > div:nth-child(2) > div:first-child { aspect-ratio: 4 / 4.6 !important; padding-bottom: 48px !important; }
+#inicio > div:nth-child(2) > div:not(:first-child) { border-radius: 5px !important; box-shadow: 0 8px 24px rgba(74,63,53,.08) !important; }
+.cartas-page div[style*="aspect-ratio"] { border-radius: 8px !important; box-shadow: inset 0 0 0 1px rgba(74,63,53,.06), 0 12px 28px rgba(74,63,53,.07); }
+.cartas-page div[style*="aspect-ratio"] > p { max-width: 260px; line-height: 1.6; }
+.story-section { grid-template-columns: 1fr 1fr !important; gap: clamp(36px, 7vw, 96px) !important; padding-block: 76px !important; }
+.story-section > div[style*="aspect-ratio"] { width: 100%; max-width: 440px; justify-self: center; }
+#historia > div:last-child { max-width: 420px; }
+#que-recibes { padding-top: 24px !important; padding-bottom: 88px !important; }
+#que-recibes > div { gap: 32px !important; }
+#que-recibes h3 { margin-block: 21px 7px !important; }
+#que-recibes > div > div > p { font-size: 18px !important; line-height: 1.5; }
+.audience-section { border-top: 1px solid #E7DDCE; }
+.audience-section > div { grid-template-columns: repeat(3, 1fr) !important; gap: 36px 46px !important; }
+.audience-section > div > div { padding: 8px 10px; }
+.steps-section > div > div > p { font-size: 17px !important; line-height: 1.6; }
+#suscripcion { padding-block: 80px !important; }
+#suscripcion > div { gap: 40px !important; }
+#suscripcion > div > div:last-child { border: 1px solid #EADFCB; border-radius: 8px !important; padding: 36px !important; box-shadow: 0 14px 36px rgba(58,63,48,.10) !important; }
+#suscripcion li { padding-bottom: 8px; border-bottom: 1px solid #EADFCB; }
+#preguntas { padding-block: 84px !important; }
+#preguntas sc-for > div { padding-block: 24px !important; }
+#preguntas sc-for > div:hover > div > p { color: #8A6952 !important; }
+#preguntas sc-for > div > div > span { width: 30px; height: 30px; line-height: 28px; text-align: center; border: 1px solid #EADFCB; border-radius: 50%; }
+#preguntas sc-if p { font-size: 18px !important; }
+.cartas-page > footer { padding-block: 32px !important; }
+.cartas-page > sc-if > div { backdrop-filter: blur(5px); overflow-y: auto; }
+.cartas-page > sc-if > div > div { border: 1px solid #EADFCB; border-radius: 10px !important; max-height: calc(100dvh - 40px); overflow-y: auto; }
+@media (max-width: 1050px) {
+  .cartas-page > header { gap: 16px !important; }
+  .cartas-page > header > nav { order: 3; width: 100%; justify-content: center; border-top: 1px solid #EADFCB; padding-top: 8px; }
+}
+@media (max-width: 700px) {
+  .cartas-page > header, .cartas-page > section, .cartas-page > footer { padding-inline: 24px !important; }
+  .cartas-page > section { padding-block: 56px !important; }
+  #inicio, .story-section { grid-template-columns: minmax(0, 1fr) !important; gap: 38px !important; }
+  #inicio { padding-top: 40px !important; padding-bottom: 72px !important; }
+  #inicio h1 { font-size: clamp(34px, 7.8vw, 48px) !important; }
+  #inicio > div:nth-child(2) { justify-self: center; max-width: 420px; margin-top: 10px; }
+  #inicio > div:nth-child(2) > div:first-child { aspect-ratio: 1 / 1 !important; }
+  #inicio > div:nth-child(2) > div:nth-child(2) { right: -8px !important; }
+  .cartas-page h2 { font-size: 28px !important; }
+  .cartas-page > header > div > span:first-child { font-size: 19px !important; }
+  .cartas-page > header > button { padding: 10px 13px !important; font-size: 10px !important; }
+  .cartas-page > header > nav { justify-content: flex-start; gap: 4px 20px !important; font-size: 12px !important; }
+  #que-recibes > div { grid-template-columns: minmax(0, 1fr) !important; max-width: 380px !important; gap: 34px !important; }
+  #que-recibes div[style*="aspect-ratio"] { aspect-ratio: 4 / 3 !important; }
+  .audience-section > div { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 28px 12px !important; }
+  .steps-section > div { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 32px 20px !important; }
+  #suscripcion > div { grid-template-columns: minmax(0, 1fr) !important; max-width: 420px !important; }
+  #suscripcion > div > div:last-child { padding: 26px !important; }
+  .cartas-page > footer { gap: 24px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cartas-page *, .cartas-page *::after { transition: none !important; }
+  .cartas-page button:hover { transform: none; }
+}
+
+
+/* Dirección visual basada en las láminas de inspiración proporcionadas. */
+body { background: #E7E0D3; }
+.cartas-page { max-width: 1440px; margin-inline: auto; box-shadow: 0 0 65px #59473712; }
+.cartas-page > section, .cartas-page > header, .cartas-page > footer { background-image: url('./assets/papel.svg') !important; }
+.cartas-page > section { position: relative; }
+.cartas-page > header { padding-block: 18px !important; }
+.cartas-page h2 { font-weight: 400 !important; }
+#inicio { gap: 0 !important; padding-top: 0 !important; padding-bottom: 0 !important; min-height: 610px; isolation: isolate; background: #F3EEE4 !important; }
+#inicio > div:first-child { position: relative; z-index: 2; padding-block: 62px 75px; padding-right: 15px; }
+#inicio h1 { font-weight: 500 !important; }
+#inicio h1 span { font-size: 1.26em !important; }
+#inicio h2 { max-width: 330px; font-size: 25px !important; }
+#inicio > div:first-child > p:not(:first-of-type) { max-width: 330px; }
+#inicio > div:nth-child(2) { position: absolute !important; inset: 0 0 0 35%; max-width: none; width: auto; z-index: 0; }
+#inicio .hero-photo { height: 100%; width: 100%; border-radius: 0 !important; aspect-ratio: auto !important; background: url('./assets/sobre-editorial.png') center / cover !important; box-shadow: none !important; }
+#inicio .hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #F3EEE4 0%, #F3EEE4E6 7%, #F3EEE470 24%, transparent 43%); }
+#inicio .hero-photo > div { display: none !important; }
+#inicio > div:nth-child(2) > div:nth-child(2) { top: 27px !important; right: 27px !important; background: #FAF6EEE8 !important; border: 0 !important; transform: rotate(5deg); padding: 17px !important; max-width: 160px !important; }
+#inicio > div:nth-child(2) > div:nth-child(2) p { font-family: 'Caveat', cursive !important; font-size: 21px !important; line-height: 1.15 !important; }
+#inicio > div:nth-child(2) > div:nth-child(3) { display: none; }
+#inicio > svg { display: none !important; }
+#inicio::after, #que-recibes::after, #suscripcion::after, .closing-section::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 18px; background: #FAF6EE; clip-path: polygon(0 55%,3% 42%,7% 59%,11% 35%,15% 50%,19% 28%,23% 42%,27% 36%,32% 63%,36% 44%,40% 59%,44% 36%,48% 45%,53% 28%,57% 48%,61% 35%,65% 62%,70% 38%,74% 54%,78% 32%,83% 43%,87% 27%,92% 51%,96% 38%,100% 52%,100% 100%,0 100%); z-index: 3; }
+#historia { background-color: #FAF6EE !important; padding-block: 54px !important; }
+.story-section { gap: 52px !important; }
+.story-section > div[style*="aspect-ratio"] { aspect-ratio: 5 / 4 !important; background: #EDE4D5 url('./assets/papel.svg') !important; box-shadow: none !important; border-radius: 2px !important; padding: 8px !important; }
+.editorial-art { display: block; width: 100%; height: 100%; object-fit: contain; }
+#historia > div:last-child { background-color: transparent !important; }
+.about-section { padding-block: 65px !important; background-color: #F3EEE4 !important; }
+.about-section::before { content: ''; position: absolute; left: 2%; bottom: 14px; width: 110px; height: 145px; background: url('./assets/rama.svg') center / contain no-repeat; opacity: .7; transform: rotate(-14deg); pointer-events: none; }
+#que-recibes { background-color: #D4D6C0 !important; padding-top: 55px !important; padding-bottom: 70px !important; }
+#que-recibes > div { max-width: 1040px !important; }
+#que-recibes div[style*="aspect-ratio"] { background: #EBE2D2 url('./assets/papel.svg') !important; aspect-ratio: 4 / 3 !important; border-radius: 2px !important; box-shadow: 0 4px 12px #4A3F3510 !important; padding: 0 !important; }
+#que-recibes > p, #que-recibes > div > div > p { color: #53593F !important; }
+#que-recibes h3 { font-size: 24px !important; font-weight: 400 !important; margin-top: 17px !important; }
+.audience-section { border-top: none; background-color: #FAF6EE !important; }
+.audience-section > p:last-child { background: #E2CCBC66 url('./assets/papel.svg'); max-width: 640px; padding: 15px 24px; margin-inline: auto !important; border-radius: 50% 20% 45% 16% / 18% 35% 20% 40%; font-family: 'Caveat', cursive !important; font-size: 25px !important; }
+.author-note { display: flex; flex-direction: column; align-items: center; padding: 28px 16px; color: #8A6952; }
+.author-note img { width: 90px; height: 114px; margin-bottom: 14px; }
+.author-note span { font-family: 'Alex Brush', cursive; font-size: 46px; line-height: 1.05; }
+.author-note strong { font-weight: 500; font-size: 24px; margin-top: 24px; }
+.author-note i { font-size: 17px; }
+.steps-section { background-color: #FAF6EE !important; }
+.steps-section > div { position: relative; }
+.steps-section > div > div { position: relative; z-index: 1; }
+.steps-section > div::before { content: ''; position: absolute; top: 31px; left: 12%; right: 12%; border-top: 1px dashed #C8B295; }
+.steps-section > div > div > div { box-shadow: 0 0 0 10px #FAF6EE; }
+#suscripcion { background-color: #D4D6C0 !important; }
+.subscription-photo { background: url('./assets/sobre-editorial.png') 60% 55% / cover !important; border-radius: 3px !important; min-height: 320px; }
+#suscripcion > div > div:last-child { box-shadow: none !important; background: #FAF6EE url('./assets/papel.svg') !important; }
+#preguntas { padding-block: 62px !important; }
+.faq-row { padding-block: 20px !important; }
+.faq-row > div > span { width: 26px; text-align: center; }
+.closing-section { background: #E2CCBC url('./assets/papel.svg') !important; padding-block: 70px !important; }
+.closing-section > :is(h2,p) { color: #4A3F35 !important; }
+.closing-section h2 { font-size: 39px !important; }
+.closing-section > button { background: #B05C4C !important; color: #FAF6EE !important; }
+.closing-section::before { content: ''; position: absolute; left: 4%; bottom: 16px; width: 160px; height: 215px; background: url('./assets/rama.svg') center / contain no-repeat; transform: rotate(-14deg); opacity: .8; }
+.closing-heart { display: block; font-size: 34px; color: #B05C4C; margin-bottom: 10px; }
+.cartas-page > footer { background-color: #FAF6EE !important; }
+@media (min-width: 1100px) {
+  #inicio { min-height: 650px; }
+  #inicio > div:first-child { padding-block: 80px 90px; }
+}
+@media (max-width: 700px) {
+  #inicio { display: flex !important; flex-direction: column; min-height: 0; padding: 0 !important; }
+  #inicio > div:first-child { width: 100%; padding: 36px 24px 28px; }
+  #inicio > div:nth-child(2) { position: relative !important; inset: auto !important; width: 100%; height: 330px; margin: 0; max-width: none; }
+  #inicio .hero-photo::after { background: linear-gradient(180deg, #F3EEE4, transparent 30%); }
+  #inicio > div:nth-child(2) > div:nth-child(2) { top: 42px !important; right: 20px !important; max-width: 140px !important; }
+  #inicio h2 { font-size: 24px !important; }
+  .story-section { gap: 24px !important; }
+  .about-section::before, .closing-section::before { width: 65px; height: 90px; opacity: .27; left: 0; }
+  #que-recibes > div { max-width: 380px !important; }
+  .steps-section > div::before { display: none; }
+  .author-note { padding: 20px 10px; }
+  .subscription-photo { min-height: 260px; }
+}
+
 </style>
 </helmet>
 
-<div style="font-family: 'Cormorant Garamond', serif; color: #4A3F35; background: #FAF6EE; overflow-x: hidden;">
+<div class="cartas-page" style="font-family: 'Cormorant Garamond', serif; color: #4A3F35; background: #FAF6EE; overflow-x: hidden;">
 
   <!-- NAV -->
   <header style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:16px 5vw; background:#FAF6EE; border-bottom:1px solid #EADFCB;">
@@ -44,11 +210,11 @@
       <p style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:0.5px; color:#8A6952; margin-top:16px;">Una entrega mensual · enviada hasta tu casa</p>
     </div>
     <div style="position:relative;">
-      <div style="aspect-ratio:4/5; border-radius:4px; background:linear-gradient(155deg,#D0B495 0%,#B05C4C 55%,#8A6952 100%); display:flex; align-items:flex-end; padding:22px; position:relative; overflow:hidden;">
+      <div class="hero-photo" role="img" aria-label="Imagen ilustrativa de un sobre kraft con sello de cera y flores secas" style="aspect-ratio:4/5; border-radius:4px; background:linear-gradient(155deg,#D0B495 0%,#B05C4C 55%,#8A6952 100%); display:flex; align-items:flex-end; padding:22px; position:relative; overflow:hidden;">
         <div style="position:absolute; top:18px; left:18px; width:46px; height:46px; border-radius:50%; background:#A23232; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(0,0,0,0.25);">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1.2 4.5 2.5 1-1.3 2.5-2.5 4.5-2.5 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z" fill="#F3EEE4"/></svg>
         </div>
-        <p style="font-family:'Playfair Display', serif; font-style:italic; color:#FAF6EE; font-size:16px; margin:0;">Foto: sobre kraft con sello de cera y flores secas</p>
+        <p style="font-family:'Playfair Display', serif; font-style:italic; color:#FAF6EE; font-size:16px; margin:0;"></p>
       </div>
       <div style="position:absolute; top:-18px; right:-14px; background:#FAF6EE; border:1px solid #EADFCB; padding:12px 18px; border-radius:3px; box-shadow:0 6px 18px rgba(74,63,53,0.1); max-width:170px;">
         <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; margin:0; color:#8A6952; line-height:1.4;">Más que cartas, una forma de quedarnos cerca.</p>
@@ -63,7 +229,7 @@
   </section>
 
   <!-- HISTORIA -->
-  <section id="historia" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
+  <section class="story-section" id="historia" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
     <div>
       <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 20px; color:#4A3F35;">La historia detrás de las cartas</h2>
       <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 16px;">Siempre he creído que recibir algo por correo es una forma de amor.</p>
@@ -71,12 +237,12 @@
       <p style="font-family:'Caveat', cursive; font-size:26px; color:#B05C4C; margin-top:26px; transform:rotate(-2deg);">Hay cosas que llegan más lejos...</p>
     </div>
     <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#E2CCBC 0%,#C68984 100%); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
-      <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#4A3F35; margin:0;">Foto: postales, sobres y una pluma sobre madera</p>
+      <img class="editorial-art" src="./assets/carta.svg" alt="Una carta sobre un sobre kraft, acompañada de una rama" loading="lazy" width="500" height="400">
     </div>
   </section>
 
   <!-- QUE SON -->
-  <section style="padding:72px 5vw; text-align:center; background:#FAF6EE; position:relative;">
+  <section class="about-section" style="padding:72px 5vw; text-align:center; background:#FAF6EE; position:relative;">
     <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 18px; color:#4A3F35;">¿Qué son Cartas para quedarme?</h2>
     <p style="font-size:19px; line-height:1.8; color:#5C5346; max-width:680px; margin:0 auto;">Es una correspondencia mensual creada para acompañar la vida. Cada mes recibirás en tu casa una carta escrita alrededor de un tema humano: aquello que estamos viviendo, sintiendo, intentando comprender, aprendiendo a soltar o queriendo volver a escuchar.</p>
     <p style="font-size:19px; line-height:1.8; color:#5C5346; max-width:680px; margin:16px auto 0;">No son cartas para enseñarte cómo vivir. Son palabras para hacer una pausa. Para sentir. Para recordar. Para quedarte un momento contigo.</p>
@@ -89,21 +255,21 @@
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; max-width:1000px; margin:0 auto;">
       <div style="text-align:center;">
         <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:14px;">
-          <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:13px; color:#4A3F35; margin:0;">Foto: carta escrita sobre madera</p>
+          <img class="editorial-art" src="./assets/carta.svg" alt="Carta ilustrada" loading="lazy" width="500" height="400">
         </div>
         <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para leer</h3>
         <p style="font-size:16px; color:#8A6952; margin:0;">La carta del mes.</p>
       </div>
       <div style="text-align:center;">
         <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#A8B092,#656D4D); display:flex; align-items:center; justify-content:center; padding:14px;">
-          <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:13px; color:#FAF6EE; margin:0;">Foto: objeto de papel con hojas</p>
+          <img class="editorial-art" src="./assets/recuerdo.svg" alt="Marcapáginas con una rama botánica" loading="lazy" width="500" height="400">
         </div>
         <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para guardar</h3>
         <p style="font-size:16px; color:#8A6952; margin:0;">Un pequeño objeto coleccionable.</p>
       </div>
       <div style="text-align:center;">
         <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#E0B046,#B05C4C); display:flex; align-items:center; justify-content:center; padding:14px;">
-          <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:13px; color:#FAF6EE; margin:0;">Foto: hierbas y flores en un tazón</p>
+          <img class="editorial-art" src="./assets/te.svg" alt="Una taza de infusión" loading="lazy" width="500" height="400">
         </div>
         <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para preparar</h3>
         <p style="font-size:16px; color:#8A6952; margin:0;">Una pócima, bebida o receta sencilla.</p>
@@ -112,9 +278,9 @@
   </section>
 
   <!-- NO ES SOLO UNA CARTA -->
-  <section style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
+  <section class="story-section" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
     <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#D0B495,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
-      <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#FAF6EE; margin:0;">Foto: manos con taza de café y libro abierto</p>
+      <img class="editorial-art" src="./assets/ritual.svg" alt="Libro abierto con una ilustración botánica" loading="lazy" width="500" height="400">
     </div>
     <div>
       <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 18px; color:#4A3F35;">No es solo una carta</h2>
@@ -126,7 +292,7 @@
   </section>
 
   <!-- PARA QUIEN -->
-  <section style="padding:74px 5vw; background:#F3EEE4;">
+  <section class="audience-section" style="padding:74px 5vw; background:#F3EEE4;">
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; text-align:center; color:#4A3F35;">¿Para quién son estas cartas?</h2>
     <p style="font-size:18px; text-align:center; color:#8A6952; margin:0 0 44px;">Estas cartas pueden ser para ti si...</p>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:36px; max-width:1000px; margin:0 auto 36px;">
@@ -159,9 +325,9 @@
   </section>
 
   <!-- DEL OTRO LADO -->
-  <section style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#FAF6EE;">
+  <section class="story-section" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#FAF6EE;">
     <div style="aspect-ratio:4/5; border-radius:3px; background:linear-gradient(160deg,#C68984,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
-      <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:15px; color:#FAF6EE; margin:0;">Foto: mujer escribiendo junto a una ventana</p>
+      <div class="author-note"><img src="./assets/rama.svg" alt="" width="100" height="127"><span>Del otro lado<br>del sobre</span><strong>Isabel de la Rosa</strong><i>Gotitas de Miel y Luz</i></div>
     </div>
     <div>
       <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 18px; color:#4A3F35;">Del otro lado del sobre estoy yo.</h2>
@@ -172,7 +338,7 @@
   </section>
 
   <!-- ASI FUNCIONA -->
-  <section style="padding:74px 5vw; text-align:center; background:#F3EEE4;">
+  <section class="steps-section" style="padding:74px 5vw; text-align:center; background:#F3EEE4;">
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 44px; color:#4A3F35;">Así funciona</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:28px; max-width:1000px; margin:0 auto;">
       <div>
@@ -203,8 +369,8 @@
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 6px; text-align:center; color:#3A3F30;">Recibe Cartas para quedarme</h2>
     <p style="font-size:18px; text-align:center; color:#4A4F3D; margin:0 0 40px;">Una entrega cada mes</p>
     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:28px; max-width:900px; margin:0 auto; align-items:center;">
-      <div style="aspect-ratio:4/3; border-radius:3px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
-        <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#4A3F35; margin:0;">Foto: sobre amarrado con listón y flores secas</p>
+      <div class="subscription-photo" role="img" aria-label="Sobre con sello y flores secas, imagen ilustrativa" style="aspect-ratio:4/3; border-radius:3px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
+        <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#4A3F35; margin:0;"></p>
       </div>
       <div style="background:#FAF6EE; border-radius:4px; padding:32px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
         <ul style="list-style:none; padding:0; margin:0 0 24px; font-size:17px; color:#4A3F35; display:flex; flex-direction:column; gap:10px;">
@@ -226,7 +392,7 @@
     <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 40px; text-align:center; color:#4A3F35;">Preguntas frecuentes</h2>
     <div style="display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto;">
       <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
-        <div style="padding:20px 0; border-bottom:1px solid #EADFCB; cursor:pointer;" onClick="{{ f.toggle }}">
+        <div class="faq-row" style="padding:20px 0; border-bottom:1px solid #EADFCB; cursor:pointer;" onClick="{{ f.toggle }}">
           <div style="display:flex; justify-content:space-between; align-items:center; gap:16px;">
             <p style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; color:#4A3F35; margin:0;">{{ f.q }}</p>
             <span style="color:#B05C4C; font-size:20px; flex-shrink:0;">{{ f.sign }}</span>
@@ -240,8 +406,8 @@
   </section>
 
   <!-- CTA FINAL -->
-  <section style="position:relative; padding:90px 5vw; background:linear-gradient(155deg,#B05C4C 0%,#8A6952 60%,#656D4D 100%); text-align:center; overflow:hidden;">
-    <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#F3EEE4; opacity:0.8; margin:0 0 10px;">Foto: cerro y montañas al atardecer</p>
+  <section class="closing-section" style="position:relative; padding:90px 5vw; background:linear-gradient(155deg,#B05C4C 0%,#8A6952 60%,#656D4D 100%); text-align:center; overflow:hidden;">
+    <span class="closing-heart" aria-hidden="true">♡</span>
     <h2 style="font-family:'Playfair Display', serif; font-size:36px; font-weight:600; margin:0 0 18px; color:#FAF6EE;">Algo bonito está en camino.</h2>
     <p style="font-size:19px; color:#F3EEE4; max-width:520px; margin:0 auto 22px; line-height:1.6;">Una carta. Un pequeño objeto. Un gesto de cuidado. Un momento para volver a ti.</p>
     <p style="font-family:'Caveat', cursive; font-size:26px; color:#F3EEE4; margin:0 0 30px;">Correspondencia para acompañar la vida. ♡</p>

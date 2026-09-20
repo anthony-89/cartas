@@ -1,0 +1,5 @@
+Herramienta: image_gen integrada (modo predeterminado).
+Recurso: sobre-editorial.png. Fotografía ilustrativa generada; no es una foto del producto real.
+
+Prompt:
+Use case: photorealistic-natural. Asset type: website hero editorial still life, landscape 3:2. Create a close-up warm authentic photograph for a gentle handwritten monthly letters project. On a softly lit cream linen tabletop: a natural kraft paper envelope tied with thin jute twine, a deep terracotta wax seal with a tiny heart impression, delicate dried chamomile flowers tucked under the twine. A folded ivory letter with barely visible indistinct handwriting at the back, a ceramic tea cup partially visible and out of focus in the upper background. Kraft envelope fills the center-right of the image. Warm natural window light, soft shadows, tactile paper fibers, understated quiet intimate photographic mood, natural muted cream, kraft brown, sage and terracotta palette. No people, no faces, no branding, no legible text, no watermarks, no collage, no borders. This is a single photographic asset, not a website screenshot. Save the final image and provide its file path.
