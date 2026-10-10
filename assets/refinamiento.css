@@ -1,0 +1,83 @@
+/* Refinamiento editorial: conserva la paleta y el carácter artesanal. */
+:root { --quiet-ink:#514538; --fine-line:#8a695229; }
+.cartas-page { color:var(--quiet-ink); }
+.cartas-page > section { padding-block:88px!important; }
+.cartas-page > header { padding-block:22px!important; }
+.cartas-page > header > div { gap:5px; }
+.cartas-page > header nav { font-size:12px!important; }
+.cartas-page h2 { letter-spacing:-.025em; }
+.cartas-page h3 { letter-spacing:-.015em; }
+.cartas-page p { line-height:1.75; }
+.cartas-page .button, dialog .button { border-radius:3px; padding:15px 24px; font-size:11px; letter-spacing:1.4px; box-shadow:none; }
+.cartas-page .button:hover, dialog .button:hover {box-shadow:0 6px 16px #654B3514;}
+#inicio { min-height:760px; padding-block:0!important; }
+#inicio h1 { font-size:clamp(40px,4.6vw,64px)!important; }
+#inicio h2 { font-size:26px!important; }
+#inicio > div:first-child { padding-block:58px!important; }
+#inicio > div:first-child > p { line-height:1.65; }
+#inicio > div:first-child > p:last-of-type { font-size:11px!important; }
+#inicio > div:nth-child(2) > div:nth-child(2) { background:#FAF6EEF5!important; border:1px solid var(--fine-line)!important; box-shadow:0 10px 30px #49372812!important; }
+#historia { grid-template-columns:1.15fr 1fr!important; gap:clamp(32px,6vw,86px)!important; }
+#historia > div:first-child > p:first-of-type { font-size:25px; line-height:1.5; color:#8A6952; }
+.story-art { width:100%; max-width:480px!important; padding:12px!important; background:#FAF6EE; border:1px solid var(--fine-line); box-shadow:0 18px 45px #5946340b; }
+.story-art .editorial-photo { display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:1px; }
+.story-art figcaption { font-family:'Caveat',cursive; font-size:23px; line-height:1.45; color:#8A6952; text-align:center;padding:16px 8px 5px; }
+.about-section p { max-width:690px; }
+.about-section:not(.resistance) > p:not(:first-of-type):not(:last-of-type) { text-align:left; }
+.about-section > p:first-of-type {font-size:24px;color:#8A6952;}
+.contents-layout {gap:56px;margin-block:45px;}
+.contents-layout > img {aspect-ratio:4/5;object-fit:cover;border-radius:2px;border:10px solid #FAF6EEA6;box-shadow:0 14px 36px #4A3F350B;}
+.contents-layout dl {counter-reset:contents;}
+.contents-layout dt {counter-increment:contents;position:relative;padding-top:17px;margin-top:17px;border-top:1px solid #656D4D33;font-size:23px;}
+.contents-layout dt::before {content:'0' counter(contents);font:10px 'Jost',sans-serif;color:#72795C;letter-spacing:1px;margin-right:13px;vertical-align:middle;}
+.contents-layout dd {font-size:18px;padding-left:30px;}
+.birthday {background:transparent;border:0;border-top:1px solid #8A69523A;border-bottom:1px solid #8A69523A;border-radius:0;padding:24px 0;max-width:760px;}
+.birthday h3 {font-size:25px;}
+.audience-section > div > div {padding:14px 10px!important;}
+.resistance {background-color:#EEE5D9!important;}
+.author-note {border:1px solid #8A69522A;margin:12px;padding:42px 24px;}
+.subscription-intro {max-width:850px;}
+.subscription-intro > h3 {text-align:center;font-size:26px;}
+#duration {background:#FAF6EE;border:1px solid #8A69524D;border-radius:3px;min-height:52px;}
+.plans-grid {gap:22px;align-items:stretch;}
+.plan-card {display:flex;flex-direction:column;padding:32px 26px 22px;border:1px solid #8A695238;border-radius:4px;box-shadow:0 10px 26px #3A3F3007;}
+.plan-card .eyebrow {color:#8A6952;font-size:9px!important;letter-spacing:2.1px;}
+.plan-card h3 {font-size:27px;min-height:80px;margin:8px 0 18px;}
+.plan-card > p:not(.plan-price):not(.eyebrow) {font-size:17px;line-height:1.65;min-height:86px;}
+.plan-price {font-family:'Cormorant Garamond',serif;font-size:46px!important;letter-spacing:-1px;padding-top:18px;border-top:1px solid var(--fine-line);margin:18px 0 25px;line-height:1.2!important;white-space:nowrap;}
+.currency-symbol {font-family:Arial,Helvetica,sans-serif!important;font-weight:400!important;font-style:normal;letter-spacing:0;display:inline-block;font-size:.7em;margin-right:.12em;}
+.currency-code {font-family:'Jost',sans-serif;font-size:11px;font-weight:400;letter-spacing:1px;margin-left:7px;}
+.plan-price small {font-size:11px;color:#8A6952;letter-spacing:.2px;white-space:normal;margin-top:12px;}
+.plan-card > .button {margin-top:auto;}
+.plan-card details {border-bottom:none;}
+.plan-card summary {font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.2px;}
+.pending {background:#F4EFE3;border:1px solid #B99A6840;border-left:2px solid #AD8B52;color:#756044;font-size:12px!important;padding:12px 15px;line-height:1.7!important;}
+.pending strong {font-weight:500;}
+.faq-list {max-width:880px;}
+.faq-list details {padding:22px 0;border-color:var(--fine-line);}
+.faq-list summary {list-style:none;display:flex;gap:25px;justify-content:space-between;align-items:center;font-size:21px;}
+.faq-list summary::-webkit-details-marker {display:none;}
+.faq-list summary::after {content:'+';flex:0 0 26px;font:300 22px 'Jost',sans-serif;color:#B05C4C;text-align:center;}
+.faq-list details[open] > summary::after {content:'−';}
+.faq-list details > p {max-width:760px;font-size:18px;}
+.closing-section {border-top:1px solid var(--fine-line);}
+#selection-summary {font-size:22px;line-height:1.65;}
+@media(min-width:1100px) { #inicio > div:first-child {max-width:460px;} }
+@media(max-width:1000px) { .plan-card h3,.plan-card>p:not(.plan-price):not(.eyebrow){min-height:0;} }
+@media(max-width:700px) {
+ .cartas-page > section {padding-block:56px!important;}
+ #inicio {padding-block:0!important;min-height:0;}
+ #inicio > div:first-child {padding:36px 24px 28px!important;}
+ #inicio h1 {font-size:42px!important;}
+ #historia {grid-template-columns:minmax(0,1fr)!important;gap:28px!important;}
+ .story-art {position:static;max-width:440px!important;}
+ .contents-layout {gap:22px;}
+ .contents-layout > img {aspect-ratio:5/4;}
+ .plans-grid {gap:20px;}
+ .plan-card {padding:27px 24px 18px;}
+ .plan-price {font-size:43px!important;}
+ .faq-list summary {font-size:19px;}
+ .author-note {margin:0;}
+}
+
+figure.story-art { margin:0; }
