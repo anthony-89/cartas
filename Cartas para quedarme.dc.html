@@ -4,13 +4,10 @@
 <meta charset="utf-8">
 <title>Cartas para quedarme · Gotitas de miel y luz</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+
 <link rel="stylesheet" href="./assets/movimiento.css">
 <script src="./assets/movimiento.js" defer></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500;600&family=Alex+Brush&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 <style>
@@ -185,7 +182,13 @@ body { background: #E7E0D3; }
 }
 
 </style>
-</helmet>
+
+<link rel="stylesheet" href="./assets/landing.css">
+<script src="./assets/landing.js" defer></script>
+</head>
+<body>
+<div id="dc-root">
+
 
 <div class="cartas-page" style="font-family: 'Cormorant Garamond', serif; color: #4A3F35; background: #FAF6EE; overflow-x: hidden;">
 
@@ -198,7 +201,7 @@ body { background: #E7E0D3; }
     <nav style="display:flex; gap:28px; flex-wrap:wrap; font-family:'Jost', sans-serif; font-size:13px; letter-spacing:0.5px; color:#5C5346;">
       <a href="#inicio" style="color:#5C5346; text-decoration:none;">Inicio</a><a href="#historia" style="color:#5C5346; text-decoration:none;">La historia</a><a href="#que-recibes" style="color:#5C5346; text-decoration:none;">Qué recibes</a><a href="#suscripcion" style="color:#5C5346; text-decoration:none;">Suscripción</a><a href="#preguntas" style="color:#5C5346; text-decoration:none;">Preguntas</a>
     </nav>
-    <button onClick="{{ openSubscribe }}" style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 22px; border-radius:2px; cursor:pointer;">Suscribirme</button>
+    <a class="button" href="#suscripcion" style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 22px; border-radius:2px; cursor:pointer;">Suscribirme</a>
   </header>
 
   <!-- HERO -->
@@ -207,8 +210,8 @@ body { background: #E7E0D3; }
       <h1 style="font-family:'Playfair Display', serif; font-size:clamp(38px,5vw,58px); font-weight:600; margin:0; line-height:1.05; color:#4A3F35;">Cartas<br><span style="font-family:'Alex Brush', cursive; font-weight:400; font-size:1.5em; color:#8A6952;">para quedarme</span></h1>
       <p style="font-family:'Jost', sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#B05C4C; margin:10px 0 26px;">Gotitas de Miel y Luz</p>
       <h2 style="font-family:'Playfair Display', serif; font-weight:500; font-size:22px; margin:0 0 14px; color:#656D4D;">Correspondencia para acompañar la vida</h2>
-      <p style="font-size:19px; line-height:1.6; color:#5C5346; max-width:440px; margin:0 0 28px;">Una carta que llega hasta tus manos para invitarte a leer, sentir, guardar y volver.</p>
-      <button onClick="{{ openSubscribe }}" style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
+      <p style="font-size:19px; line-height:1.6; color:#5C5346; max-width:440px; margin:0 0 28px;">Una carta que llega hasta tus manos para invitarte a leer, sentir, guardar y volver.</p><p>Una suscripción mensual para volver a la emoción de recibir una carta.</p><p>Cada mes, algo preparado con cuidado emprenderá el camino hasta tu buzón: palabras, imágenes, pequeños objetos, propuestas para hacer y alguna que otra sorpresa.</p><p>Una pausa fuera de la pantalla. Un regalo para ti. Algo que esperar.</p>
+      <a class="button" href="#suscripcion" style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</a>
       <p style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:0.5px; color:#8A6952; margin-top:16px;">Una entrega mensual · enviada hasta tu casa</p>
     </div>
     <div style="position:relative;">
@@ -231,67 +234,16 @@ body { background: #E7E0D3; }
   </section>
 
   <!-- HISTORIA -->
-  <section class="story-section" id="historia" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
-    <div>
-      <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 20px; color:#4A3F35;">La historia detrás de las cartas</h2>
-      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 16px;">Siempre he creído que recibir algo por correo es una forma de amor.</p>
-      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0;">De niña me escribía por correspondencia con una amiga. Más tarde, cuando viví fuera de México, las cartas siguieron siendo un puente. Hoy, aunque tenemos mensajes inmediatos, recibir algo tangible sigue provocando algo diferente en el cuerpo.</p>
-      <p style="font-family:'Caveat', cursive; font-size:26px; color:#B05C4C; margin-top:26px; transform:rotate(-2deg);">Hay cosas que llegan más lejos...</p>
-    </div>
-    <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#E2CCBC 0%,#C68984 100%); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
-      <img class="editorial-art" src="./assets/carta.svg" alt="Una carta sobre un sobre kraft, acompañada de una rama" loading="lazy" width="500" height="400">
-    </div>
-  </section>
+<section id="historia" class="story-section"><div><h2>La historia detrás de las cartas</h2><p>Siempre he creído que recibir algo por correo es una forma de amor.</p><p>De niña me escribía por correspondencia con una amiga. Más tarde, cuando viví fuera de México, las cartas siguieron siendo un puente. Y todavía hoy, cuando viajo y envío una postal o recibo algo que alguien eligió, escribió y puso en camino para mí, siento que hay algo profundamente especial en ese gesto.</p><p>Vivimos en una época en la que podemos comunicarnos de inmediato. Un mensaje llega en segundos, una videollamada atraviesa cualquier distancia y casi todo está al alcance de una pantalla. Y, sin embargo, recibir algo tangible sigue provocando algo diferente.</p><p>Hay espera. Hay sorpresa. Hay manos. Hay tiempo. Hay alguien que pensó en ti antes de que eso llegara hasta tu puerta.</p><p>Desde hace muchos años, una parte importante de mi vida ha sido acompañar a las personas de distintas maneras.</p><p>A veces ese acompañamiento ocurre en un proceso terapéutico. Otras veces toma la forma de un audio, una meditación, una clase, un curso, un taller o unas palabras compartidas en el momento preciso.</p><p>Cartas para quedarme nace como una nueva forma de acompañar.</p><p>Una forma más lenta, tangible y cercana.</p><p>Una correspondencia que pueda llegar hasta tus manos, entrar en tu casa y quedarse contigo un poco más allá del momento en que la lees.</p><p>Porque algunas palabras se escuchan. Otras se viven. Y algunas merecen también guardarse.</p></div><div class="story-art"><img class="editorial-art" src="./assets/carta.svg" alt="Carta y rama botánica" width="500" height="400" loading="lazy"></div></section>
 
   <!-- QUE SON -->
-  <section class="about-section" style="padding:72px 5vw; text-align:center; background:#FAF6EE; position:relative;">
-    <h2 style="font-family:'Playfair Display', serif; font-size:32px; font-weight:600; margin:0 0 18px; color:#4A3F35;">¿Qué son Cartas para quedarme?</h2>
-    <p style="font-size:19px; line-height:1.8; color:#5C5346; max-width:680px; margin:0 auto;">Es una correspondencia mensual creada para acompañar la vida. Cada mes recibirás en tu casa una carta escrita alrededor de un tema humano: aquello que estamos viviendo, sintiendo, intentando comprender, aprendiendo a soltar o queriendo volver a escuchar.</p>
-    <p style="font-size:19px; line-height:1.8; color:#5C5346; max-width:680px; margin:16px auto 0;">No son cartas para enseñarte cómo vivir. Son palabras para hacer una pausa. Para sentir. Para recordar. Para quedarte un momento contigo.</p>
-  </section>
+<section class="about-section"><h2>¿Qué es el Mail Club de Cartas para quedarme?</h2><p>Cartas para quedarme es un Mail Club por suscripción.</p><p>Es una correspondencia mensual creada para acompañar la vida. Cada mes recibirás en tu casa, por correo postal, una carta escrita alrededor de un tema humano: aquello que estamos viviendo, sintiendo, intentando comprender, aprendiendo a soltar o queriendo volver a escuchar. Mes a mes, recibirás una nueva entrega creada especialmente para quienes forman parte de esta correspondencia.</p><p>No son cartas para enseñarte cómo vivir. Son palabras para hacer una pausa. Para sentir. Para recordar. Para quedarte un momento contigo.</p><p>Y si disfrutas recibir cartas al modo tradicional, los stickers, las pequeñas sorpresas, guardar papeles bonitos o encontrar algo inesperado dentro de un sobre, probablemente este espacio te encantará.</p><p>Es también una invitación a tener, al menos una vez al mes, una experiencia diferente de lo digital, lo rápido y lo inmediato. Algo que puedas tocar. Abrir. Preparar. Guardar.</p><p>Y volver a encontrar tiempo después.</p></section>
 
   <!-- QUE ENCONTRARAS -->
-  <section id="que-recibes" style="padding:16px 5vw 76px; background:#FAF6EE;">
-    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 8px; text-align:center; color:#4A3F35;">¿Qué encontrarás dentro del sobre?</h2>
-    <p style="font-size:18px; text-align:center; color:#8A6952; margin:0 0 40px;">Cada mes recibirás una experiencia completa, pensada con cuidado.</p>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:28px; max-width:1000px; margin:0 auto;">
-      <div style="text-align:center;">
-        <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:14px;">
-          <img class="editorial-art" src="./assets/carta.svg" alt="Carta ilustrada" loading="lazy" width="500" height="400">
-        </div>
-        <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para leer</h3>
-        <p style="font-size:16px; color:#8A6952; margin:0;">La carta del mes.</p>
-      </div>
-      <div style="text-align:center;">
-        <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#A8B092,#656D4D); display:flex; align-items:center; justify-content:center; padding:14px;">
-          <img class="editorial-art" src="./assets/recuerdo.svg" alt="Marcapáginas con una rama botánica" loading="lazy" width="500" height="400">
-        </div>
-        <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para guardar</h3>
-        <p style="font-size:16px; color:#8A6952; margin:0;">Un pequeño objeto coleccionable.</p>
-      </div>
-      <div style="text-align:center;">
-        <div style="aspect-ratio:1/1; border-radius:3px; margin-bottom:16px; background:linear-gradient(160deg,#E0B046,#B05C4C); display:flex; align-items:center; justify-content:center; padding:14px;">
-          <img class="editorial-art" src="./assets/te.svg" alt="Una taza de infusión" loading="lazy" width="500" height="400">
-        </div>
-        <h3 style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; margin:0 0 4px; color:#4A3F35;">Para preparar</h3>
-        <p style="font-size:16px; color:#8A6952; margin:0;">Una pócima, bebida o receta sencilla.</p>
-      </div>
-    </div>
-  </section>
+<section id="que-recibes"><h2>¿Qué encontrarás dentro del sobre?</h2><p class="center">Cada entrega parte de una carta, pero no termina ahí.</p><article class="contents-layout"><img src="./assets/sobre-editorial.png" width="1536" height="1024" alt="Imagen ilustrativa de un sobre con flores y sello de cera" loading="lazy"><div><p>Dentro del sobre podrás encontrar diferentes maneras de acompañar el tema del mes:</p><dl><dt>Para leer</dt><dd>Una carta escrita especialmente para esta comunidad.</dd><dt>Para guardar</dt><dd>Una imagen, postal, sticker, tarjeta o pequeño elemento coleccionable.</dd><dt>Para preparar</dt><dd>Una receta, bebida, pócima o propuesta sencilla para hacer en casa.</dd><dt>Para experimentar</dt><dd>Algún gesto, pregunta, práctica o pequeña actividad que te invite a llevar la carta a tu experiencia.</dd></dl></div></article><p class="center">Cada edición será distinta. Porque parte de la experiencia también está en no saber exactamente qué encontrarás dentro del siguiente sobre.</p><aside class="birthday"><h3>Y si es el mes de tu cumpleaños…</h3><p>Si al realizar tu suscripción nos compartes tu fecha de cumpleaños, durante ese mes encontrarás un pequeño detalle extra preparado especialmente para celebrar contigo.</p><p>Porque hay meses que merecen un poquito más de cariño.</p></aside></section>
 
   <!-- NO ES SOLO UNA CARTA -->
-  <section class="story-section" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#F3EEE4;">
-    <div style="aspect-ratio:1/1; border-radius:3px; background:linear-gradient(160deg,#D0B495,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
-      <img class="editorial-art" src="./assets/ritual.svg" alt="Libro abierto con una ilustración botánica" loading="lazy" width="500" height="400">
-    </div>
-    <div>
-      <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 18px; color:#4A3F35;">No es solo una carta</h2>
-      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 14px;">Hay cosas que llegan rápido. Y hay cosas que merecen llegar despacio.</p>
-      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 14px;">Abrir el buzón. Encontrar un sobre. Reconocer tu nombre en él. Romper un sello. Desdoblar una hoja. Preparar algo caliente. Leer sin prisa.</p>
-      <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0;">Cartas para quedarme quiere recuperar ese pequeño ritual.</p>
-      <p style="font-family:'Caveat', cursive; font-size:24px; color:#B05C4C; margin-top:20px; transform:rotate(-1.5deg);">Una pausa también es parte del camino. ♡</p>
-    </div>
-  </section>
+<section class="story-section"><div class="story-art"><img class="editorial-art" src="./assets/ritual.svg" width="500" height="400" alt="Libro abierto" loading="lazy"></div><div><h2>No es solo una carta</h2><p>Hay cosas que llegan rápido. Y hay cosas que merecen llegar despacio.</p><p>Los Mail Clubs generan la emoción de esperar una carta y recuperan una manera antigua de mantenernos cerca: la correspondencia postal. Cartas para quedarme quiere recuperar ese pequeño ritual.</p><p>Aquí las cosas suceden un poco más despacio.</p><p>Las cartas se diseñan, imprimen, cortan, preparan, doblan, ensobretan y envían juntas.</p><p>Hay manos detrás de cada una. Hay tiempo. Hay espera. Esta espera también forma parte de la experiencia.</p><p>Abrir el buzón. Encontrar un sobre. Reconocer tu nombre en él. Romper un sello. Desdoblar una hoja. Preparar algo caliente. Leer sin prisa.</p><p>Gracias por permitir que tu carta viaje a su propio ritmo.</p></div></section>
 
   <!-- PARA QUIEN -->
   <section class="audience-section" style="padding:74px 5vw; background:#F3EEE4;">
@@ -326,6 +278,7 @@ body { background: #E7E0D3; }
     <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:17px; text-align:center; color:#8A6952; margin:0;">No necesitas estar pasando por algo difícil para necesitar compañía.</p>
   </section>
 
+<section class="about-section resistance"><h2>Una pequeña resistencia a la prisa</h2><p>Enviar cartas es también una forma de permanencia.</p><p>Un gesto romántico en medio de un mundo veloz, volátil, saturado de información y acostumbrado a que todo ocurra inmediatamente.</p><p>Cartas para quedarme es una pequeña resistencia a esa velocidad.</p><p>Una insistencia en tocar el papel. En guardar. En esperar. En dedicar tiempo. En vivir con el corazón. En dejar algo que pueda permanecer cuando la pantalla se apaga.</p><p>No necesitas estar pasando por algo difícil para necesitar compañía.</p></section>
   <!-- DEL OTRO LADO -->
   <section class="story-section" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:40px; padding:56px 5vw; align-items:center; background:#FAF6EE;">
     <div style="aspect-ratio:4/5; border-radius:3px; background:linear-gradient(160deg,#C68984,#8A6952); display:flex; align-items:center; justify-content:center; padding:24px; text-align:center;">
@@ -335,7 +288,7 @@ body { background: #E7E0D3; }
       <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 18px; color:#4A3F35;">Del otro lado del sobre estoy yo.</h2>
       <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 14px;">Soy Isabel de la Rosa. Desde hace años acompaño procesos humanos a través de la psicoterapia, la meditación, el trabajo corporal y las palabras.</p>
       <p style="font-size:19px; line-height:1.7; color:#5C5346; margin:0 0 24px;">Gotitas de Miel y Luz nació como una forma de acompañar a través de la voz. Cartas para quedarme nace del deseo de llevar ese acompañamiento a algo que puedas tocar, abrir, guardar y encontrar nuevamente tiempo después.</p>
-      <button style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px 26px; border-radius:2px; cursor:pointer;">Conóceme más</button>
+      <details class="biography"><summary class="button">Conoce más de mi camino</summary><h3>Un poco más de mí</h3><p>Desde hace años acompaño procesos de autoconocimiento, regulación emocional y transformación personal a través de la psicoterapia, la meditación, el trabajo corporal, la creatividad y la palabra.</p><p>Mi manera de acompañar se ha ido construyendo en distintos espacios: la consulta terapéutica, las clases, las meditaciones guiadas, los cursos y los proyectos que he creado para acercar herramientas de reflexión y presencia a la vida cotidiana.</p><p>Me interesa especialmente aquello que nos ayuda a volver al cuerpo, escuchar lo que sentimos y relacionarnos con nuestra experiencia con un poco más de curiosidad, compasión y conciencia.</p><p>De ese deseo han nacido distintos proyectos.</p><p>Gotitas de Miel y Luz surgió como una manera de acompañar a través de la voz: pequeños audios, reflexiones y meditaciones para hacer una pausa y volver a uno mismo.</p><p>Cartas para quedarme continúa ese mismo camino, pero de otra manera. Esta vez el acompañamiento viaja en papel.</p><p>Puede tocarse, abrirse, guardarse y volver a encontrarse tiempo después.</p><p>Me gusta pensar que todas estas formas de acompañar tienen algo en común: no buscan decirte cómo vivir, sino ofrecerte espacios para escuchar con mayor claridad lo que tu propia vida tiene que decirte.</p></details>
     </div>
   </section>
 
@@ -367,45 +320,10 @@ body { background: #E7E0D3; }
   </section>
 
   <!-- RECIBE / PRICING -->
-  <section id="suscripcion" style="padding:74px 5vw; background:#A8B092;">
-    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 6px; text-align:center; color:#3A3F30;">Recibe Cartas para quedarme</h2>
-    <p style="font-size:18px; text-align:center; color:#4A4F3D; margin:0 0 40px;">Una entrega cada mes</p>
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:28px; max-width:900px; margin:0 auto; align-items:center;">
-      <div class="subscription-photo" role="img" aria-label="Sobre con sello y flores secas, imagen ilustrativa" style="aspect-ratio:4/3; border-radius:3px; background:linear-gradient(160deg,#F3EEE4,#D0B495); display:flex; align-items:center; justify-content:center; padding:20px; text-align:center;">
-        <p style="font-family:'Playfair Display', serif; font-style:italic; font-size:14px; color:#4A3F35; margin:0;"></p>
-      </div>
-      <div style="background:#FAF6EE; border-radius:4px; padding:32px; box-shadow:0 10px 30px rgba(0,0,0,0.08);">
-        <ul style="list-style:none; padding:0; margin:0 0 24px; font-size:17px; color:#4A3F35; display:flex; flex-direction:column; gap:10px;">
-          <li>✓ Carta del mes</li>
-          <li>✓ Objeto para guardar</li>
-          <li>✓ Propuesta para preparar</li>
-          <li>✓ Envío incluido*</li>
-        </ul>
-        <p style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 20px; color:#4A3F35;">$7 USD <span style="font-size:16px; font-weight:400; color:#8A6952;">/ mes</span></p>
-        <button onClick="{{ openSubscribe }}" style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px; border-radius:2px; cursor:pointer; margin-bottom:10px;">Quiero suscribirme</button>
-        <button style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:transparent; color:#8A6952; border:1px solid #D0B495; padding:14px; border-radius:2px; cursor:pointer;">Regalar una suscripción</button>
-        <p style="font-size:13px; color:#8A6952; margin:14px 0 0;">*Consulta zonas de envío en preguntas frecuentes.</p>
-      </div>
-    </div>
-  </section>
+<section id="suscripcion"><h2>Recibe Cartas para quedarme</h2><p class="center">Una entrega cada mes</p><article class="subscription-intro"><h3>Selecciona tu suscripción</h3><p>Todas las opciones incluyen el mismo contenido de Cartas para quedarme. Lo único que cambia es la forma de envío y la posibilidad de rastrear el recorrido de tu carta.</p><p>Cada mes preparamos una nueva edición especialmente para las personas que forman parte del Mail Club. El contenido es exclusivo de esta correspondencia y no se publica de la misma manera en otras plataformas.</p><p>Dependiendo del tema, tu sobre podrá incluir una carta para leer, un objeto para guardar, una receta para preparar y una pequeña sorpresa. Cada edición es diferente: no necesariamente encontrarás todos estos elementos en cada envío.</p><label for="duration">Elige la duración</label><select id="duration"><option value="0">Compra única</option><option value="1" selected>Suscripción mensual</option><option value="2">Suscripción por 3 meses</option><option value="3">Suscripción anual</option></select><p class="pending"><strong>Por confirmar:</strong> descuentos anunciados de 10 % y 15 %: los importes del documento están redondeados y no coinciden exactamente con esos porcentajes.</p></article><article class="plans-grid"><article class="plan-card"><p class="eyebrow">Carta en camino</p><h3>Sin rastreo</h3><p>Disponible para México y envíos internacionales.</p><p>Tu carta viajará por correo postal tradicional, sin número de guía ni posibilidad de seguimiento.</p><p class="plan-price" data-price="sin-rastreo">$160 MXN <small>al mes</small></p><button class="button" type="button" data-plan="sin-rastreo">Quiero esta opción</button><details><summary>Envío y condiciones</summary><p>Las cartas se preparan juntas y se depositan en Correos de México durante los primeros días de cada mes.</p><p class="pending"><strong>Por confirmar:</strong> plazo de entrega: México: 3 a 4 semanas. Internacional: 5 a 8 semanas. Los tiempos difieren de los indicados en las preguntas frecuentes del documento.</p><p>Tu envío no incluye número de guía ni rastreo. Una vez depositado el sobre en Correos de México, no podemos consultar su ubicación o recorrido. Los tiempos son aproximados y no están garantizados. Al no existir forma de localizar un envío sin rastreo, no se ofrecen reembolsos ni reposiciones por retrasos, pérdidas o incidencias atribuibles al servicio postal. Si deseas seguir el recorrido de tu carta, elige una opción con rastreo.</p></details></article><article class="plan-card"><p class="eyebrow">Carta en camino</p><h3>México con rastreo</h3><p>Disponible únicamente para direcciones dentro de México.</p><p>Incluye un número de guía para consultar el recorrido de tu carta.</p><p class="plan-price" data-price="mexico">$195 MXN <small>al mes</small></p><button class="button" type="button" data-plan="mexico">Quiero esta opción</button><details><summary>Envío y condiciones</summary><p>Las cartas se preparan juntas y se depositan en Correos de México durante los primeros días de cada mes.</p><p class="pending"><strong>Por confirmar:</strong> plazo de entrega: México: 2 a 4 semanas. Los tiempos difieren de los indicados en las preguntas frecuentes del documento.</p><p>Tu número de guía será enviado durante los primeros 15 días del mes. Si la guía indica que el sobre está disponible para recolección en una oficina postal, debes recogerlo dentro del plazo señalado para evitar su devolución. El rastreo permite consultar el recorrido, pero los tiempos siguen dependiendo del servicio postal.</p></details></article><article class="plan-card"><p class="eyebrow">Carta en camino</p><h3>Internacional con rastreo</h3><p>Para direcciones fuera de México, excepto Estados Unidos.</p><p>Recibirás el mismo contenido del Mail Club, con un número de guía para rastrear tu envío.</p><p class="plan-price" data-price="internacional">$215 MXN <small>al mes</small></p><button class="button" type="button" data-plan="internacional">Quiero esta opción</button><details><summary>Envío y condiciones</summary><p>Las cartas se preparan juntas y se depositan en Correos de México durante los primeros días de cada mes.</p><p class="pending"><strong>Por confirmar:</strong> plazo de entrega: Internacional: 2 a 8 semanas. Los tiempos difieren de los indicados en las preguntas frecuentes del documento.</p><p>Tu número de guía será enviado durante los primeros 15 días del mes. Si la guía indica que el sobre está disponible para recolección en una oficina postal, debes recogerlo dentro del plazo señalado para evitar su devolución. El rastreo permite consultar el recorrido, pero los tiempos siguen dependiendo del servicio postal. Tras llegar al país de destino, el recorrido y la entrega dependen también del servicio postal local y los procesos aduanales.</p></details></article></article><article class="subscription-intro"><p>Puedes cancelar tu suscripción en cualquier momento.</p><p class="pending"><strong>Por confirmar:</strong> condiciones de cancelación y devolución de periodos de 3 meses o anuales ya pagados.</p><p class="pending"><strong>Por confirmar:</strong> fecha de corte y aplicación exacta: el documento propone hasta el día 14 inclusive, para recibir la edición del mes siguiente; desde el día 15, la edición posterior. El ejemplo de octubre presenta fechas inconsistentes.</p><details><summary>¿No sabes cuál elegir?</summary><p>Si buscas la opción más económica y no necesitas seguir el envío, elige <strong>Sin rastreo</strong>.</p><p>Si vives en México y quieres seguir tu carta, elige <strong>México con rastreo</strong>.</p><p>Si vives fuera de México y quieres rastrearla, elige <strong>Internacional con rastreo</strong>.</p><p>Si vives en Estados Unidos, por el momento deberás elegir la modalidad sin rastreo.</p></details><aside class="birthday"><h3>Cada mes también puedes recibir el siguiente de regalo</h3><p>Con cada compra mensual participas en la posibilidad de recibir la edición del mes siguiente sin costo.</p><p class="pending"><strong>Por confirmar:</strong> mecánica, selección de participantes y condiciones de esta promoción.</p></aside></article></section>
 
   <!-- FAQ -->
-  <section id="preguntas" style="padding:74px 5vw; background:#FAF6EE;">
-    <h2 style="font-family:'Playfair Display', serif; font-size:30px; font-weight:600; margin:0 0 40px; text-align:center; color:#4A3F35;">Preguntas frecuentes</h2>
-    <div style="display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto;">
-      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
-        <div class="faq-row" style="padding:20px 0; border-bottom:1px solid #EADFCB; cursor:pointer;" onClick="{{ f.toggle }}">
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:16px;">
-            <p style="font-family:'Playfair Display', serif; font-size:19px; font-weight:600; color:#4A3F35; margin:0;">{{ f.q }}</p>
-            <span style="color:#B05C4C; font-size:20px; flex-shrink:0;">{{ f.sign }}</span>
-          </div>
-          <sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}">
-            <p style="font-size:16px; line-height:1.6; color:#5C5346; margin:12px 0 0; white-space:pre-line;">{{ f.a }}</p>
-          </sc-if>
-        </div>
-      </sc-for>
-    </div>
-  </section>
+<section id="preguntas"><h2>Preguntas frecuentes</h2><article class="faq-list"><details><summary>¿Cuándo llegará mi primera carta?</summary><p>Las cartas se preparan en conjunto y se envían durante los primeros días de cada mes.</p><p class="pending"><strong>Por confirmar:</strong> fecha de corte y aplicación exacta: el documento propone hasta el día 14 inclusive, para recibir la edición del mes siguiente; desde el día 15, la edición posterior. El ejemplo de octubre presenta fechas inconsistentes.</p></details><details><summary>¿A qué lugares realizan envíos?</summary><p>A todo el mundo.</p></details><details><summary>¿Cuánto tarda en llegar?</summary><p class="pending"><strong>Por confirmar:</strong> los plazos dependen de la modalidad. Sin rastreo: México, 3 a 4 semanas; internacional, 5 a 8 semanas. Con rastreo: México, 2 a 4 semanas; internacional, 2 a 8 semanas. Las preguntas frecuentes del documento indican otros plazos: México, 3 a 10 días; internacional, 2 a 6 semanas.</p><p>Trabajamos con correspondencia postal y los tiempos pueden variar según el servicio postal y los procesos aduanales.</p></details><details><summary>¿Tienes dificultades para recibir correspondencia en casa?</summary><p>Si en tu domicilio suelen existir problemas para recibir correo o paquetería, puedes proporcionarnos la dirección de una oficina postal cercana donde sea posible recibir tu correspondencia, siempre verificando previamente que esa oficina ofrezca dicho servicio.</p><p>Lo más importante es que utilices una dirección en la que tengas confianza de que la carta podrá encontrarte.</p></details><details><summary>¿Puedo cancelar mi suscripción?</summary><p>Claro. Puedes cancelar tu suscripción en cualquier momento.</p><p>Queremos que recibir estas cartas siga siendo una elección y no una obligación.</p></details><details><summary>¿Puedo regalar una suscripción?</summary><p>Claro que sí. Cartas para quedarme también puede convertirse en una forma muy especial de acompañar a alguien que quieres.</p><p>Al momento de hacer la suscripción, únicamente necesitamos que registres correctamente el nombre y los datos completos de la persona que recibirá las cartas.</p></details><details><summary>¿Todas las personas reciben la misma carta?</summary><p>Sí. Cada mes escribimos y enviamos una sola carta para toda nuestra comunidad de suscriptores.</p><p>Es una publicación creada especialmente para Cartas para quedarme y su contenido no se publica de la misma manera en ningún otro medio. Quienes están suscritos comparten, desde distintos lugares, una misma correspondencia y un mismo tema durante ese mes.</p></details><details><summary>¿Las cartas anteriores están disponibles?</summary><p>Sí. Si comenzaste tu suscripción después de que el proyecto ya había iniciado y deseas recibir alguna de las cartas anteriores, podemos hacértelas llegar.</p><p>Solo será necesario cubrir el costo correspondiente a esas publicaciones y su envío.</p></details><details><summary>¿Puedo cambiar mi domicilio?</summary><p>Sí. Si cambias de domicilio, puedes actualizar tus datos enviándonos un correo con tu nueva dirección completa.</p><p>Es importante hacerlo antes de que preparemos el envío del mes para asegurarnos de que tu carta llegue al lugar correcto.</p></details><details><summary>¿Tengo que recibir las doce cartas?</summary><p>No. Puedes comenzar tu suscripción en cualquier momento del año.</p><p>Por ejemplo, si te suscribes durante julio, comenzarás a recibir tu correspondencia a partir de agosto y continuarás mientras tu suscripción permanezca activa. Si deseas recibir también las cartas publicadas durante los meses anteriores, podrás solicitarlas por separado, sujeto a disponibilidad.</p></details><details><summary>¿Y si mi carta no llega?</summary><p>La correspondencia tradicional algunas veces puede tomar un poco más de tiempo del esperado. Si ha transcurrido el plazo estimado y tu carta todavía no llega, escríbeme para que podamos revisar qué sucedió y encontrar juntos una solución.</p><p>Instagram: <a href="https://www.instagram.com/isabeldelarosadi/">@isabeldelarosadi</a></p><p class="pending"><strong>Por confirmar:</strong> correo electrónico de contacto.</p></details><details><summary>Puedes elegir cómo quieres recibir tus cartas</summary><p>Puedes comprar una edición, suscribirte mes a mes o elegir 3 meses o un año. Consulta los importes según modalidad y duración en <a href="#suscripcion">las opciones de suscripción</a>.</p></details><details><summary>¿Prefieres pagar por transferencia?</summary><p>Si prefieres realizar tu suscripción mediante transferencia bancaria, puedes escribirme directamente por Instagram.</p><p>Con gusto te ayudaré personalmente con el proceso.</p><p><a href="https://www.instagram.com/isabeldelarosadi/">Escribir a Isabel en Instagram</a></p></details><details><summary>Hecho a la antigüita</summary><p>Cartas para quedarme funciona, en muchos sentidos, a la antigüita.</p><p>Detrás de cada entrega hay un proceso artesanal. Pensar el tema. Escribir. Diseñar. Imprimir. Cortar postales y tarjetas. Preparar los pequeños elementos. Doblar. Ensobretar. Cerrar. Y finalmente dejar que cada carta comience su viaje.</p><p>Quiero ofrecerte la mejor atención posible y, al mismo tiempo, conservar aquello que hace especial a este proyecto:</p><p>que detrás de cada sobre haya tiempo, intención y manos preparando algo para ti.</p><p>Gracias por esperar. Gracias por recibir. Gracias por permitir que todavía haya cosas que lleguen despacio.</p></details><details><summary>Antes de confirmar tu suscripción</summary><p>Queremos que tu carta encuentre el camino hasta ti. Revisa cuidadosamente tu dirección completa:</p><ul><li>Nombre completo</li><li>Calle y número</li><li>Número interior, si corresponde</li><li>Colonia o barrio</li><li>Código postal</li><li>Ciudad o municipio</li><li>Estado, provincia o región</li><li>País</li></ul><p>Si falta algún dato indispensable, tendremos que esperar a tener la dirección completa antes de realizar el envío.</p></details></article></section>
 
   <!-- CTA FINAL -->
   <section class="closing-section" style="position:relative; padding:90px 5vw; background:linear-gradient(155deg,#B05C4C 0%,#8A6952 60%,#656D4D 100%); text-align:center; overflow:hidden;">
@@ -413,7 +331,7 @@ body { background: #E7E0D3; }
     <h2 style="font-family:'Playfair Display', serif; font-size:36px; font-weight:600; margin:0 0 18px; color:#FAF6EE;">Algo bonito está en camino.</h2>
     <p style="font-size:19px; color:#F3EEE4; max-width:520px; margin:0 auto 22px; line-height:1.6;">Una carta. Un pequeño objeto. Un gesto de cuidado. Un momento para volver a ti.</p>
     <p style="font-family:'Caveat', cursive; font-size:26px; color:#F3EEE4; margin:0 0 30px;">Correspondencia para acompañar la vida. ♡</p>
-    <button onClick="{{ openSubscribe }}" style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#FAF6EE; color:#B05C4C; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</button>
+    <a class="button" href="#suscripcion" style="font-family:'Jost', sans-serif; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; background:#FAF6EE; color:#B05C4C; border:none; padding:16px 30px; border-radius:2px; cursor:pointer;">Quiero recibir mis cartas</a>
   </section>
 
   <!-- FOOTER -->
@@ -423,7 +341,7 @@ body { background: #E7E0D3; }
       <span style="font-family:'Jost', sans-serif; font-size:8px; letter-spacing:2px; color:#B05C4C; text-transform:uppercase;">Gotitas de miel y luz</span>
     </div>
     <nav style="display:flex; gap:22px; flex-wrap:wrap; font-family:'Jost', sans-serif; font-size:12px; color:#5C5346;">
-      <a href="#inicio" style="color:#5C5346; text-decoration:none;">Inicio</a><a href="#historia" style="color:#5C5346; text-decoration:none;">La historia</a><a href="#suscripcion" style="color:#5C5346; text-decoration:none;">Suscripción</a><a href="#preguntas" style="color:#5C5346; text-decoration:none;">Preguntas</a><span>Contacto</span>
+      <a href="#inicio" style="color:#5C5346; text-decoration:none;">Inicio</a><a href="#historia" style="color:#5C5346; text-decoration:none;">La historia</a><a href="#suscripcion" style="color:#5C5346; text-decoration:none;">Suscripción</a><a href="#preguntas" style="color:#5C5346; text-decoration:none;">Preguntas</a><a href="https://www.instagram.com/isabeldelarosadi/">Contacto</a>
     </nav>
     <div style="display:flex; gap:16px; color:#8A6952;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
@@ -432,76 +350,6 @@ body { background: #E7E0D3; }
     </div>
   </footer>
 
-  <!-- SUBSCRIBE MODAL -->
-  <sc-if value="{{ subscribeOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed; inset:0; background:rgba(74,63,53,0.45); display:flex; align-items:center; justify-content:center; padding:20px; z-index:100;" onClick="{{ closeSubscribe }}">
-      <div style="background:#FAF6EE; border-radius:4px; padding:36px; max-width:400px; width:100%; box-shadow:0 20px 50px rgba(0,0,0,0.25); text-align:center;" onClick="{{ stopClick }}">
-        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
-          <p style="font-family:'Playfair Display', serif; font-style:italic; color:#B05C4C; font-size:26px; margin:0 0 12px;">¡Gracias!</p>
-          <p style="font-size:17px; color:#5C5346; margin:0 0 24px; line-height:1.6;">Tu primera carta llegará muy pronto. Revisa tu correo para confirmar la suscripción.</p>
-          <button onClick="{{ closeSubscribe }}" style="font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:12px 24px; border-radius:2px; cursor:pointer;">Cerrar</button>
-        </sc-if>
-        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
-          <h3 style="font-family:'Playfair Display', serif; font-size:24px; font-weight:600; margin:0 0 10px; color:#4A3F35;">Quiero recibir mis cartas</h3>
-          <p style="font-size:16px; color:#8A6952; margin:0 0 22px;">Déjanos tu correo para comenzar tu suscripción de $7 USD / mes.</p>
-          <div>
-            <input type="email" placeholder="tu@correo.com" value="{{ email }}" onChange="{{ setEmail }}" style="width:100%; font-family:'Cormorant Garamond', serif; font-size:17px; padding:12px 14px; border:1px solid #D0B495; border-radius:2px; background:#FAF6EE; color:#4A3F35; margin-bottom:8px;"/>
-            <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
-              <p style="font-size:13px; color:#A23232; margin:0 0 8px; text-align:left;">Escribe un correo válido.</p>
-            </sc-if>
-            <button onClick="{{ submitEmail }}" style="width:100%; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1.5px; text-transform:uppercase; background:#B05C4C; color:#FAF6EE; border:none; padding:14px; border-radius:2px; cursor:pointer; margin-top:6px;">Confirmar suscripción</button>
-          </div>
-          <button onClick="{{ closeSubscribe }}" style="margin-top:14px; font-family:'Jost', sans-serif; font-size:12px; letter-spacing:1px; background:transparent; color:#8A6952; border:none; cursor:pointer;">Cancelar</button>
-        </sc-if>
-      </div>
-    </div>
-  </sc-if>
-
-</div>
-
-</x-dc>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  state = { openFaq: null, subscribeOpen: false, email: '', submitted: false, showError: false };
-  renderVals() {
-    const raw = [
-        { q: '¿Cuándo llegará mi primera carta?', a: 'Si vives en México, tu carta llegará durante los primeros días del mes.\n\nSi vives fuera de México, el tiempo de entrega puede ser un poco mayor y puedes esperar recibirla entre la segunda y la tercera semana del mes.' },
-        { q: '¿A qué lugares realizan envíos?', a: 'Enviamos Cartas para quedarme a todo el mundo.\n\nSi tu envío es dentro de México, el costo de envío ya está incluido en tu suscripción. Para envíos internacionales se añade $1 USD al costo de la suscripción.' },
-        { q: '¿El costo incluye el envío?', a: 'Sí. El costo de tu suscripción ya incluye el envío.\n\nEn el caso de los envíos fuera de México, únicamente se añade $1 USD por envío internacional.' },
-        { q: '¿Puedo cancelar mi suscripción?', a: 'Claro. Puedes cancelar tu suscripción en cualquier momento.\n\nQueremos que recibir estas cartas siga siendo una elección y no una obligación.' },
-        { q: '¿Puedo regalar una suscripción?', a: 'Claro que sí. Cartas para quedarme también puede convertirse en una forma muy especial de acompañar a alguien que quieres.\n\nAl momento de hacer la suscripción, únicamente necesitamos que registres correctamente el nombre y los datos completos de la persona que recibirá las cartas.' },
-        { q: '¿Todas las personas reciben la misma carta?', a: 'Sí. Cada mes escribimos y enviamos una sola carta para toda nuestra comunidad de suscriptores.\n\nEs una publicación creada especialmente para Cartas para quedarme y su contenido no se publica de la misma manera en ningún otro medio. Quienes están suscritos comparten, desde distintos lugares, una misma correspondencia y un mismo tema durante ese mes.' },
-        { q: '¿Las cartas anteriores están disponibles?', a: 'Sí. Si comenzaste tu suscripción después de que el proyecto ya había iniciado y deseas recibir alguna de las cartas anteriores, podemos hacértelas llegar.\n\nSolo será necesario cubrir el costo correspondiente a esas publicaciones y su envío.' },
-        { q: '¿Qué ocurre si mi carta no llega?', a: 'Aunque esperamos que cada carta encuentre su camino hasta ti, sabemos que alguna vez un envío puede extraviarse.\n\nSi tu carta no llega, escríbenos y con gusto realizaremos un nuevo envío sin costo adicional. Si después de esta experiencia prefieres cancelar tu suscripción, también podemos realizar el reembolso correspondiente a ese mes.' },
-        { q: '¿Puedo cambiar mi domicilio?', a: 'Sí. Si cambias de domicilio, puedes actualizar tus datos enviándonos un correo con tu nueva dirección completa.\n\nEs importante hacerlo antes de que preparemos el envío del mes para asegurarnos de que tu carta llegue al lugar correcto.' },
-        { q: '¿Tengo que recibir las doce cartas?', a: 'No. Puedes comenzar tu suscripción en cualquier momento del año.\n\nPor ejemplo, si te suscribes durante julio, comenzarás a recibir tu correspondencia a partir de agosto y continuarás mientras tu suscripción permanezca activa. Si deseas recibir también las cartas publicadas durante los meses anteriores, podrás solicitarlas por separado, sujeto a disponibilidad.' }
-      ];
-    return {
-      months: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
-      faqs: raw.map((f, i) => ({
-        q: f.q,
-        a: f.a,
-        open: this.state.openFaq === i,
-        sign: this.state.openFaq === i ? '−' : '+',
-        toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? null : i }))
-      })),
-      subscribeOpen: this.state.subscribeOpen,
-      submitted: this.state.submitted,
-      notSubmitted: !this.state.submitted,
-      email: this.state.email,
-      showError: this.state.showError,
-      openSubscribe: () => this.setState({ subscribeOpen: true, submitted: false, email: '', showError: false }),
-      closeSubscribe: () => this.setState({ subscribeOpen: false }),
-      stopClick: (e) => e.stopPropagation(),
-      setEmail: (e) => this.setState({ email: e.target.value, showError: false }),
-      submitEmail: () => {
-        const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.state.email);
-        if (!ok) { this.setState({ showError: true }); return; }
-        this.setState({ submitted: true });
-      }
-    };
-  }
-}
-</script>
-</body>
-</html>
+</div></div>
+<dialog id="selection-dialog" aria-labelledby="selection-title"><form method="dialog"><button class="dialog-close" aria-label="Cerrar">×</button></form><h2 id="selection-title">Tu correspondencia</h2><p id="selection-summary"></p><p class="pending"><strong>Por confirmar:</strong> el enlace de pago y el proceso para completar la suscripción. Tu selección no genera ningún cargo ni registra una suscripción.</p><h3>Antes de confirmar tu suscripción</h3><p>Revisa que tu dirección esté completa: nombre completo, calle y número, número interior si corresponde, colonia o barrio, código postal, ciudad o municipio, estado, provincia o región y país.</p><p>Si falta algún dato indispensable, tendremos que esperar a tener la dirección completa antes de realizar el envío.</p><p>Si deseas recibir el detalle de cumpleaños, podrás compartir tu fecha de cumpleaños al suscribirte.</p><a class="button" href="https://www.instagram.com/isabeldelarosadi/" target="_blank" rel="noopener noreferrer">Consultar por Instagram</a></dialog>
+</body></html>
